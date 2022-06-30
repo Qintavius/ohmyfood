@@ -94,7 +94,7 @@ des points de suspension. Un exemple de l’effet attendu est fourni.
 
 
 
-## Organisation interne du projet:
+### Organisation interne du projet:
 
 Chef de projet : Paul
 UX Designer : Fanny

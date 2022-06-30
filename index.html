@@ -4,9 +4,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ohmyfood</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet"> <!--  font Shrikhand -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet"> <!-- font Roboto -->
+    <script src="https://kit.fontawesome.com/aabe6b2ecf.js" crossorigin="anonymous"></script>
+    <title>Ohmyfood</title>
 </head>
 <body>
-    
+    <header>
+        <h1 class="header__logo">ohmyfood</h1>
+    </header>
+
+    <main class="main"> <!--  Container principal parent de section 1, 2, 3 et 4 -->
+
+        <section class="location">  <!-- Section 1 localisation -->
+            <i class="fa-solid fa-location-dot"></i><form action="search">Paris,Belleville</form>
+        </section>
+
+        <section class="explore"> <!-- Sectioon 2 à propos et explorer nos restaurants -->
+            <div class="about">
+                <h2>Réservez le menu qui vous convient</h2>
+                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
+                <button class="button__explore">Explorer nos restaurants</button>
+            </div>
+        </section>
+
+        <section class="step"> <!-- section 3 Etapes -->
+            <h2>Fonctionnement</h2>
+            <div class="step step1">
+                <span class="circle-num">1</span><i class="fa-solid fa-mobile-screen-button"></i>Choisissez un restaurant
+            </div>
+            <div class="step step2">
+                <span class="circle-num">2</span><i class="fa-solid fa-list-ul"></i>Composez votre menu
+            </div>
+            <div class="step step3">
+                <span class="circle-num">3</span><i class="fa-solid fa-store"></i>Dégustez au restaurant
+            </div>
+        </section>
+
+        <section class="rest"> <!-- section 4 Restaurants -->
+            <h2>Restaurants</h2>
+            <div class="rest-card"> <!-- container carte restaurant -->
+                <img src="assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">   <!-- image carte restaurant -->
+                <div class="card-info"> <!-- container texte sous carte restaurant -->
+                    <h4>La palette du goût</h4> <!-- titre restaurant -->
+                    <p>Ménilmontant</p><i class="fa-regular fa-heart"></i> <!-- Lieu restaurant / icone favoris -->
+                </div>
+            </div>
+
+            <div class="rest-card">
+                <img src="assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+                <div class="card-info">
+                    <h4>La note enchantée</h4>
+                    <p>Charonne</p><i class="fa-regular fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="rest-card">
+                <img src="assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+                <div class="card-info">
+                    <h4>à la française</h4>
+                    <p>Cité Rouge</p><i class="fa-regular fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="rest-card">
+                <img src="assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+                <div class="card-info">
+                    <h4>Le délice des sens</h4>
+                    <p>Folie-Méricourt</p><i class="fa-regular fa-heart"></i>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h4>homyfood</h4>
+        <ul>
+            <li><i class="fa-solid fa-utensils"></i>Proposer un restaurant</li>
+            <li><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</li>
+            <li>Mentions légales</li>
+            <li>Contact</li>
+        </ul>
+    </footer>
+
 </body>
 </html>
