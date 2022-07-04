@@ -1,0 +1,32 @@
+.location {
+    display: flex;
+    justify-content: center;
+    background-color: #EAEAEA;
+    padding: 18px;
+    box-shadow: inset 0px 6px 3px -3px rgba(0, 0, 0, 0.11);
+
+    i {
+        margin-right: 17px;
+    }
+
+    form {
+        letter-spacing: 0.01em;
+    }
+}
+
+.explore {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 38px 16px;
+
+    .about {
+        h2 {
+            padding: 0 14px;
+        }
+
+        p {
+            border: solid;
+        }
+    }
+}
