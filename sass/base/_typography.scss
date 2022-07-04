@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+
+$font-logo: 'Shrikand';
+$font-txt: 'Roboto', sans-serif;
+
+main {
+    font-family: $font-txt;
+    &.main--home .about {
+        h2 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 400;
+            word-spacing: -0.05em;
+        }
+    }
+}
+
+button {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    letter-spacing: 0.005em;
+}
+
