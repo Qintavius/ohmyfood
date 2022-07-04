@@ -4,20 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet"> <!--  font Shrikhand -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet"> <!-- font Roboto -->
+    <link rel="stylesheet" href="css/main.css">
     <script src="https://kit.fontawesome.com/aabe6b2ecf.js" crossorigin="anonymous"></script>
     <title>à la française</title>
 </head>
 <body>
-    <header class="header--menu">
-        <i class="fa-solid fa-arrow-left"></i> <!-- flèche retour acceuil -->
+    <header>
+        <a href=""><i class="fa-solid fa-arrow-left"></i></a> <!-- flèche retour acceuil -->
         <img src="assets/logo/ohmyfood.png" alt="logo homyfood">    <!-- logo homyfood -->
     </header>
 
-    <main>
+    <main class="main__menu">
         <figure class="menu-top-img">
             <img src="assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
         </figure>
@@ -28,13 +25,13 @@
                 <i class="fa-regular fa-heart"></i>
             </div>
 
-            <section class="entree">    <!-- section entrée -->
+            <section class="menu-entree">    <!-- section entrée -->
                 <h3 class="course-title">Entrée</h3>    <!-- titre de la section -->
                 <div class="course-tab">    <!-- container de la carte -->
                     <h4>Fricassé d'escargot</h4>    <!-- titre du produit -->
-                    <p class="course-recipe">Au piment d'Espelette</p>  <!-- description du produit -->
-                    <p class="course-price">25€</p>    <!-- prix du produit -->
-                    <span class="tab-check">    <!-- icone de validation du produit -->
+                    <p class="course-tab__recipe">Au piment d'Espelette</p>  <!-- description du produit -->
+                    <p class="course-tab__price">25€</p>    <!-- prix du produit -->
+                    <span class="course-tab__check">    <!-- icone de validation du produit -->
                         <i class="fa-solid fa-circle-check"></i>
                     </span>
                 </div>  <!-- Fin container carte -->
