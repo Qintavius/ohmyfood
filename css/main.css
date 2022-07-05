@@ -224,6 +224,7 @@ button.button--explore {
 }
 .rest-card figure figcaption {
   position: relative;
+  background-color: white;
 }
 
 .icon_fav {
@@ -235,8 +236,23 @@ button.button--explore {
   top: 0;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+.icon_fav:hover .fa-heart {
+  background: -webkit-linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px transparent;
+  padding: 2px;
+}
+
+.fa-heart {
   font-size: 23px;
-  z-index: 1;
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px black;
+  transition: all 0.3s ease;
 }
 
 /*# sourceMappingURL=main.css.map */
