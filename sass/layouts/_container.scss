@@ -1,4 +1,4 @@
-.location {
+.location {     /* Container location accueil */
     display: flex;
     width: 100%;
     height: 50px;
@@ -12,7 +12,7 @@
     }
 }
 
-.explore {
+.explore {      /* Container explore accueil */
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -22,7 +22,7 @@
     text-align: center;
     background-color: #F6F6F6;
 
-    .about {
+    .about {    /* Contenu about du container explore */
         height: 100%;
         padding: 10% 0;
         
@@ -36,3 +36,11 @@
     }
 }
 
+.step, .rest {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 19px;
+
+    
+}

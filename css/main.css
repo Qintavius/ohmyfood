@@ -29,6 +29,7 @@ button { /* boutons explore et order */
   letter-spacing: 0.005em;
 }
 
+.location { /* Container location accueil */ }
 .location form {
   letter-spacing: 0.01em;
 }
@@ -60,7 +61,7 @@ header img {
   object-fit: contain;
 }
 
-.location {
+.location { /* Container location accueil */
   display: flex;
   width: 100%;
   height: 50px;
@@ -73,7 +74,7 @@ header img {
   margin-right: 17px;
 }
 
-.explore {
+.explore { /* Container explore accueil */
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -83,7 +84,7 @@ header img {
   text-align: center;
   background-color: #F6F6F6;
 }
-.explore .about {
+.explore .about { /* Contenu about du container explore */
   height: 100%;
   padding: 10% 0;
 }
@@ -94,7 +95,14 @@ header img {
   margin: 12px 0 30px 0;
 }
 
-button {
+.step, .rest {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 19px;
+}
+
+button { /* Style commun aux boutons */
   background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
   height: 50px;
   border-radius: 39px;
@@ -102,7 +110,7 @@ button {
   border: none;
   transition: linear 0.3s;
 }
-button:hover {
+button:hover { /* Effet de survol boutons */
   opacity: 0.9;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 }
