@@ -10,4 +10,12 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 
+$color-dark-gray: #EAEAEA;
+$color-light-gray: #F6F6F6;
 
+:root {
+    --btn-shadow-dft: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    --btn-shadow-hover: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    --tab-shadow-dft: 0px 6px 10px rgba(0, 0, 0, 0.1);
+    --tab-shadow-hover: 0px 6px 10px rgba(0, 0, 0, 0.15);
+}
