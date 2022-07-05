@@ -1,24 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
 * {
+  box-sizing: border-box;
   list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
 
 body, html {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
+/* Charte couleur */
+/* Couleurs fond de sections */
+/* Box shadow boutons et cartes */
 :root {
   --btn-shadow-dft: 0px 4px 8px rgba(0, 0, 0, 0.25);
   --btn-shadow-hover: 0px 4px 8px rgba(0, 0, 0, 0.4);
   --tab-shadow-dft: 0px 6px 10px rgba(0, 0, 0, 0.1);
   --tab-shadow-hover: 0px 6px 10px rgba(0, 0, 0, 0.15);
+  --card-shadow-dft: 0px 2px 14px rgba(0, 0, 0, 0.2);
+  --card-shadow-hover: 0px 3px 8px rgba(0, 0, 0, 0.04);
 }
 
+/* Couleurs fonts */
 .main--home { /* Container main page Accueil */
   font-family: "Roboto", sans-serif;
 }
@@ -53,6 +60,18 @@ button { /* boutons explore et order */
 .step p {
   font-size: 16px;
   font-weight: 600;
+}
+
+figcaption {
+  padding: 15px 0 16px 12px;
+  font-size: 18px;
+  font-weight: 700;
+  color: black;
+}
+figcaption p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #696969;
 }
 
 header {
@@ -128,16 +147,19 @@ section {
 
 .rest {
   flex-direction: column;
-  height: auto;
+  padding: 54px 19px;
   background-color: #F6F6F6;
 }
 .rest ul {
-  position: relative;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
 }
 .rest ul li {
-  height: 171px;
-  border: solid;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow-dft);
+  z-index: 0;
 }
 
 button { /* Style commun aux boutons */
@@ -191,8 +213,30 @@ button.button--explore {
   margin-left: 28px;
 }
 
-.rest-card img {
+.rest-card figure {
+  height: 251px;
+  padding-bottom: 77px;
+}
+.rest-card figure img {
   object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.rest-card figure figcaption {
+  position: relative;
+}
+
+.icon_fav {
+  display: flex;
+  position: absolute;
+  width: 77px;
+  height: 100%;
+  right: 0;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: 23px;
+  z-index: 1;
 }
 
 /*# sourceMappingURL=main.css.map */

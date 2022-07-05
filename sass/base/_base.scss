@@ -1,4 +1,5 @@
 * {
+    box-sizing: border-box;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -6,7 +7,6 @@
 }
 
 body, html {
-    box-sizing: border-box;
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
@@ -29,6 +29,8 @@ $color-light-gray: #F6F6F6;
     --btn-shadow-hover: 0px 4px 8px rgba(0, 0, 0, 0.4);
     --tab-shadow-dft: 0px 6px 10px rgba(0, 0, 0, 0.1);
     --tab-shadow-hover: 0px 6px 10px rgba(0, 0, 0, 0.15);
+    --card-shadow-dft: 0px 2px 14px rgba(0, 0, 0, 0.2);
+    --card-shadow-hover: 0px 3px 8px rgba(0, 0, 0, 0.04);
 }
 
 /* Couleurs fonts */

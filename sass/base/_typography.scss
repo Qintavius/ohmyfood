@@ -43,3 +43,15 @@ button {    /* boutons explore et order */
     }
 }
 
+figcaption {
+    padding: 15px 0 16px 12px;
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+
+    p {
+        font-size: 18px;
+        font-weight: 400;
+        color: $color-font-gray;
+    }
+}
