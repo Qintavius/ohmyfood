@@ -1,5 +1,8 @@
-.location, .explore {
+section {
     display: flex;
+}
+
+.location, .explore {
     justify-content: center;
 }
 
@@ -37,10 +40,25 @@
 
 .step {
     flex-direction: column;
-    height: 440px;
-    padding: 44px 19px 0 19px;
+    padding: 36px 19px 36px 19px;
 
     h2 {
-       margin: 0 0 34px 0;
+        margin: 12px 0 30px 0;
+    }
+}
+
+.rest {
+    flex-direction: column;
+    height: auto;
+    background-color: $color-light-gray;
+
+    ul {
+        position: relative;
+        width: 100%;
+
+        li {
+            height: 171px;
+            border: solid;
+        }
     }
 }
