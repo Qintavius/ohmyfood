@@ -40,9 +40,11 @@
     figure {
         height: 251px;
         padding-bottom: 77px;
+        background-color: white;
 
         img {
             object-fit: cover;
+            object-position: 0 -50px;
             width: 100%;
             height: 100%;
         }
