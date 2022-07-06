@@ -143,7 +143,7 @@ section {
 }
 .explore .about { /* Contenu about du container explore */
   height: 100%;
-  padding: 10% 0;
+  padding: 10% 0 15% 0;
 }
 .explore .about h2 {
   margin: 0 16%;
