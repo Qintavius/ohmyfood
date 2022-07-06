@@ -140,10 +140,10 @@ section {
   align-items: center;
   text-align: center;
   background-color: #F6F6F6;
+  padding: 10% 5% 15% 5%;
 }
 .explore .about { /* Contenu about du container explore */
   height: 100%;
-  padding: 10% 0 15% 0;
 }
 .explore .about h2 {
   margin: 0 16%;
@@ -234,9 +234,11 @@ button.button--explore {
 .rest-card figure {
   height: 251px;
   padding-bottom: 77px;
+  background-color: white;
 }
 .rest-card figure img {
   object-fit: cover;
+  object-position: 0 -50px;
   width: 100%;
   height: 100%;
 }
