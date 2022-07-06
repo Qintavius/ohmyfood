@@ -44,7 +44,6 @@
 
         img {
             object-fit: cover;
-            object-position: 0 -50px;
             width: 100%;
             height: 100%;
         }
@@ -54,5 +53,29 @@
             background-color: white;
         }
 
+    }
+}
+
+.card1 {
+    img {
+        object-position: 0 -50px;
+    }
+}
+
+.card2 {
+    img {
+        object-position: 0 -150px;
+    }
+}
+
+.card3 {
+    img {
+        object-position: 0 -55px;
+    }
+}
+
+.card4 {
+    img {
+        object-position: 0 -60px;
     }
 }
