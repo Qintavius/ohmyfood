@@ -147,7 +147,7 @@ section {
 
 .rest {
   flex-direction: column;
-  padding: 54px 19px;
+  padding: 54px 19px 62px 19px;
   background-color: #F6F6F6;
 }
 .rest h2 {
