@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
 
-$font-logo: 'Shrikand';
+$font-logo: 'Shrikhand', cursive;
 $font-txt: 'Roboto', sans-serif;
 
 .main--home {  /* Container main page Accueil */
@@ -53,5 +53,23 @@ figcaption {
         font-size: 18px;
         font-weight: 400;
         color: $color-font-gray;
+    }
+}
+
+
+footer {
+    color: white;
+
+    h4 {
+        font-size: 18px;
+        font-family: $font-logo;
+        font-weight: normal;
+    }
+
+    li {
+        line-height: 27px;
+        font-family: $font-txt;
+        font-size: 16px;
+        font-weight: normal;
     }
 }

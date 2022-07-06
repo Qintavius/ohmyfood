@@ -74,6 +74,21 @@ figcaption p {
   color: #696969;
 }
 
+footer {
+  color: white;
+}
+footer h4 {
+  font-size: 18px;
+  font-family: "Shrikhand", cursive;
+  font-weight: normal;
+}
+footer li {
+  line-height: 27px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+
 header {
   display: flex;
   position: relative;
@@ -270,6 +285,19 @@ button.button--explore {
   -webkit-text-stroke: 0px;
   opacity: 0;
   transition: 0.5s ease-in;
+}
+
+footer {
+  display: block;
+  padding: 24px 0 33px 25px;
+  background-color: #353535;
+}
+footer h4 {
+  margin-bottom: 13px;
+}
+footer i {
+  font-size: 13px;
+  margin-right: 10px;
 }
 
 /*# sourceMappingURL=main.css.map */
