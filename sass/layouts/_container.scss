@@ -40,7 +40,7 @@ section {
 
 .step {
     flex-direction: column;
-    padding: 36px 19px 36px 19px;
+    padding: 36px 19px 42px 19px;
 
     h2 {
         margin: 12px 0 30px 0;
@@ -51,6 +51,10 @@ section {
     flex-direction: column;
     padding: 54px 19px;
     background-color: $color-light-gray;
+
+    h2 {
+        margin: 0 0 22px 0;
+    }
 
     ul {
         display: flex;
