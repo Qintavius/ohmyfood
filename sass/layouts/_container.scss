@@ -19,7 +19,7 @@ section {
 
 .explore {      /* Container explore accueil */
     flex-direction: column;
-    height: 286px;
+    height: auto;
     align-items: center;
     text-align: center;
     background-color: $color-light-gray;

@@ -121,7 +121,7 @@ section {
 
 .explore { /* Container explore accueil */
   flex-direction: column;
-  height: 286px;
+  height: auto;
   align-items: center;
   text-align: center;
   background-color: #F6F6F6;
@@ -239,20 +239,34 @@ button.button--explore {
   cursor: pointer;
 }
 .icon_fav:hover .fa-heart {
-  background: -webkit-linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 2px transparent;
-  padding: 2px;
+  -webkit-text-stroke: 1.5px transparent;
+}
+.icon_fav:hover .fa-heart::after {
+  opacity: 1;
 }
 
 .fa-heart {
+  position: relative;
   font-size: 23px;
-  background: white;
+  background: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 2px black;
-  transition: all 0.3s ease;
+  -webkit-text-stroke: 1.5px black;
+  transition: 0.5s linear;
+}
+.fa-heart::after {
+  content: "\f004";
+  font-family: Font Awesome 6 free;
+  padding: 2px;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background: -webkit-linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0px;
+  opacity: 0;
+  transition: 0.5s ease-in;
 }
 
 /*# sourceMappingURL=main.css.map */
