@@ -1,7 +1,7 @@
 /* Importation des fonts */
 
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
 /* Variables fonts */
 $font-logo: 'Shrikhand', cursive;
@@ -65,6 +65,35 @@ figcaption {    /* Contient l'image de carte page accueil */
         font-size: 18px;
         font-weight: 400;
         color: $color-font-gray;
+    }
+}
+
+.dish {
+    font-family: $font-txt;
+
+    .dish-title {
+        font-size: 16px;
+        font-weight: 400;
+        color: $color-font-gray;
+        text-transform: uppercase;
+    }
+
+    .dish-card {
+        font-weight: 500;
+
+        h4 {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 15px;
+            letter-spacing: -0.01em;
+            color: $color-font-gray;
+
+            &:nth-child(2) {
+                font-weight: 700;
+            }
+        }
     }
 }
 
