@@ -16,7 +16,7 @@ body, html {
 
 /* Charte couleur */
 /* Couleurs fond de sections */
-/* Box shadow boutons et cartes */
+/* Box shadow boutons, onglets et cartes */
 :root {
   --btn-shadow-dft: 0px 4px 8px rgba(0, 0, 0, 0.25);
   --btn-shadow-hover: 0px 4px 8px rgba(0, 0, 0, 0.4);
@@ -27,6 +27,8 @@ body, html {
 }
 
 /* Couleurs fonts */
+/* Importation des fonts */
+/* Variables fonts */
 .main--home { /* Container main page Accueil */
   font-family: "Roboto", sans-serif;
 }
@@ -39,6 +41,10 @@ body, html {
 h2 { /* Titre des containers */
   font-size: 24px;
   font-weight: 700;
+}
+h2.rest-title { /* Règle pour pages menu */
+  font-family: "Shrikhand", cursive;
+  font-size: 28px;
 }
 
 button { /* boutons explore et order */
@@ -63,13 +69,14 @@ button { /* boutons explore et order */
   font-weight: 600;
 }
 
-figcaption p:nth-child(1) {
+figcaption { /* Contient l'image de carte page accueil */ }
+figcaption p:nth-child(1) { /* Nom du restaurant */
   font-size: 18px;
   font-weight: 700;
   text-transform: capitalize;
   color: black;
 }
-figcaption p {
+figcaption p { /* Emplacement restaurant page accueil */
   font-size: 18px;
   font-weight: 400;
   color: #696969;
@@ -98,30 +105,33 @@ header {
   justify-content: center;
   align-items: center;
 }
-header a {
+header a { /* Zone de clique étendu pour icone flèche retour */
   display: flex;
   position: absolute;
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 36px;
+  width: 63px;
   left: 0;
-  padding: 8px 0 0 0;
   text-decoration: none;
   color: black;
 }
-header img {
+header i { /* icone flèche retour */
+  font-size: 21px;
+  padding: 26px 0 21px 0;
+}
+header img { /* logo ohmyfood */
   height: 100%;
   width: 162px;
   padding: 8px 0 0 0;
   object-fit: contain;
 }
 
-section {
+section { /* Règle commune */
   display: flex;
 }
 
-.location, .explore {
+.location, .explore { /* règle container location + explore */
   justify-content: center;
 }
 
@@ -153,7 +163,7 @@ section {
   margin: 12px 0 30px 0;
 }
 
-.step {
+.step { /* Container Fonctionnement */
   flex-direction: column;
   padding: 36px 19px 42px 19px;
 }
@@ -161,7 +171,7 @@ section {
   margin: 12px 0 30px 0;
 }
 
-.rest {
+.rest { /* Container Restaurants */
   flex-direction: column;
   padding: 54px 19px 62px 19px;
   background-color: #F6F6F6;
@@ -179,6 +189,61 @@ section {
   border-radius: 14px;
   overflow: hidden;
   box-shadow: var(--card-shadow-dft);
+}
+
+.main-menu { /* Container principal page menu */
+  width: 100%;
+}
+.main-menu .menu-top-img {
+  height: 267px;
+}
+.main-menu > .dish {
+  padding: 0 12px;
+  margin-top: 30px;
+}
+
+.menu-top-img { /* Container image sous le header page menu */ }
+.menu-top-img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.menu { /* Container menu */
+  flex-direction: column;
+  position: relative;
+  margin-top: -51px;
+  width: 100%;
+  padding: 36px 20px;
+  border-radius: 42px 42px 0 0;
+  background-color: #F6F6F6;
+}
+.menu h2 {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dish { /* Container type de plats */
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin: 30px 0;
+  background-color: #F6F6F6;
+}
+.dish .dish-title {
+  position: relative;
+  margin-bottom: 22px;
+}
+.dish .dish-title::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 100%;
+  padding: 3px 0;
+  top: 0;
+  border-bottom: 3px solid #99E2D0;
 }
 
 button { /* Style commun aux boutons */
@@ -233,6 +298,7 @@ button.button--explore {
   margin-left: 28px;
 }
 
+.rest-card { /* Cartes restaurants */ }
 .rest-card figure {
   width: 100%;
   height: 174px;
@@ -253,6 +319,7 @@ button.button--explore {
   margin-bottom: 4px;
 }
 
+.card1 { /* Carte numérotée pour attribuer règle de position d'image  */ }
 .card1 img {
   object-position: 0 -50px;
 }
@@ -269,7 +336,46 @@ button.button--explore {
   object-position: 0 -55px;
 }
 
-.icon_fav {
+.dish-card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 68px;
+  margin: 14px 0;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: var(--tab-shadow-dft);
+  overflow: hidden;
+}
+.dish-card .dish-card-txt {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+  align-content: center;
+  padding: 12px 22px 12px 12px;
+}
+.dish-card .dish-card-txt .dish-card-subtxt {
+  display: flex;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+.dish-card .dish-card-txt .dish-card-subtxt .dish-subtxt {
+  flex: 3;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+.dish-card .dish-card-txt .dish-card-subtxt .dish-price {
+  flex: 1;
+  text-align: end;
+}
+
+.icon_fav { /* Zone de clique étendu pour icone favoris */
   display: flex;
   position: absolute;
   width: 77px;
@@ -280,28 +386,32 @@ button.button--explore {
   align-items: center;
   cursor: pointer;
 }
-.icon_fav:hover .fa-heart {
+.icon_fav--menu { /* Règle spécifique pages menu */
+  position: absolute;
+  width: 48px;
+}
+.icon_fav:hover .fa-heart { /* Animation icone au survol de la zone de clique étendu */
   -webkit-text-stroke: 1.5px transparent;
 }
-.icon_fav:hover .fa-heart::after {
+.icon_fav:hover .fa-heart::after { /* Replicat visible au survol */
   opacity: 1;
   font-size: 23px;
   padding: 2px;
 }
 
-.fa-heart {
+.fa-heart { /* Icone favoris */
   position: relative;
   font-size: 23px;
   background: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1.5px black;
-  transition: 0.6s linear;
+  transition: 0.5s linear;
 }
-.fa-heart::after {
+.fa-heart::after { /* Replicat icone favoris en transparence */
   content: "\f004";
   font-size: 0px;
-  padding: 13px;
+  padding: 13px; /* fait apparaitre l'icone au centre */
   position: absolute;
   top: -2px;
   left: -2px;
@@ -310,7 +420,7 @@ button.button--explore {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 0px;
   opacity: 0;
-  transition: 0.4s linear;
+  transition: 0.3s linear;
 }
 
 footer {
@@ -324,6 +434,36 @@ footer h4 {
 footer i {
   font-size: 13px;
   margin-right: 10px;
+}
+
+.dish-check {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  right: 0;
+  top: 0;
+  width: 59px;
+  height: 100%;
+  transform: translateX(100%);
+  background-color: #99E2D0;
+  transition: all 0.3s ease;
+}
+.dish-check .fa-circle-check {
+  transform: rotate(360deg);
+  transition: 0.3s ease;
+}
+
+.dish-card:hover .dish-check {
+  transform: translateX(0%);
+}
+.dish-card:hover .dish-check .fa-circle-check {
+  transform: rotate(0deg);
+}
+.dish-card:hover .dish-card-subtxt {
+  width: 80%;
 }
 
 /*# sourceMappingURL=main.css.map */
