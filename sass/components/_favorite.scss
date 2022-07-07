@@ -9,6 +9,10 @@
     align-items: center;
     cursor: pointer;
 
+    &--menu {
+        right: 14px;
+    }
+
     &:hover .fa-heart {
         -webkit-text-stroke: 1.5px transparent;
         &::after {
