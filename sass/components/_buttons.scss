@@ -1,6 +1,7 @@
 button {    /* Style commun aux boutons */
     background: linear-gradient(180deg, $color-secondary 0%, $color-primary 100%);
     height: 50px;
+    width: 218px;
     border-radius: 39px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
     border: none;
@@ -12,7 +13,7 @@ button {    /* Style commun aux boutons */
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
     }
     
-    &.button--explore {
-        width: 218px;
+    &.button--order {
+        width: 185px;
     }
 }

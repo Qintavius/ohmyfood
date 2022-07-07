@@ -22,13 +22,14 @@ body, html {
   --btn-shadow-hover: 0px 4px 8px rgba(0, 0, 0, 0.4);
   --tab-shadow-dft: 0px 6px 10px rgba(0, 0, 0, 0.1);
   --tab-shadow-hover: 0px 6px 10px rgba(0, 0, 0, 0.15);
-  --card-shadow-dft: 0px 2px 14px rgba(0, 0, 0, 0.2);
-  --card-shadow-hover: 0px 3px 8px rgba(0, 0, 0, 0.04);
+  --card-shadow-dft: 0px 3px 8px rgba(0, 0, 0, 0.04);
+  --card-shadow-hover: 0px 2px 14px rgba(0, 0, 0, 0.2);
 }
 
 /* Couleurs fonts */
 /* Importation des fonts */
 /* Variables fonts */
+/* Page d'accueil */
 .main--home { /* Container main page Accueil */
   font-family: "Roboto", sans-serif;
 }
@@ -45,6 +46,7 @@ h2 { /* Titre des containers */
 h2.rest-title { /* Règle pour pages menu */
   font-family: "Shrikhand", cursive;
   font-size: 28px;
+  font-weight: 400;
 }
 
 button { /* boutons explore et order */
@@ -82,6 +84,7 @@ figcaption p { /* Emplacement restaurant page accueil */
   color: #696969;
 }
 
+/* Page menu */
 .dish {
   font-family: "Roboto", sans-serif;
 }
@@ -106,13 +109,14 @@ figcaption p { /* Emplacement restaurant page accueil */
   font-weight: 700;
 }
 
+/* Footer */
 footer {
   color: white;
 }
 footer h4 {
   font-size: 18px;
   font-family: "Shrikhand", cursive;
-  font-weight: normal;
+  font-weight: 400;
 }
 footer li {
   line-height: 27px;
@@ -213,21 +217,19 @@ section { /* Règle commune */
   border-radius: 14px;
   overflow: hidden;
   box-shadow: var(--card-shadow-dft);
+  transition: 0.3s ease;
+}
+.rest ul li:hover {
+  box-shadow: var(--card-shadow-hover);
 }
 
 .main-menu { /* Container principal page menu */
   width: 100%;
 }
-.main-menu .menu-top-img {
+.main-menu .menu-top-img { /* Container image sous le header page menu */
   height: 267px;
 }
-.main-menu > .dish {
-  padding: 0 12px;
-  margin-top: 30px;
-}
-
-.menu-top-img { /* Container image sous le header page menu */ }
-.menu-top-img img {
+.main-menu .menu-top-img img {
   width: 100%;
   object-fit: cover;
 }
@@ -247,24 +249,32 @@ section { /* Règle commune */
   position: relative;
   align-items: center;
   justify-content: space-between;
+  padding: 0 6px;
+}
+.menu .order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 36px 0 48px 0;
 }
 
 .dish { /* Container type de plats */
   flex-direction: column;
   width: 100%;
   height: auto;
-  margin: 30px 0 15px 0;
+  margin: 30px 0 0 0;
   background-color: #F6F6F6;
 }
 .dish .dish-title {
   position: relative;
   margin-bottom: 22px;
+  padding: 0 6px;
 }
 .dish .dish-title::before {
   content: "";
   position: absolute;
   width: 40px;
-  height: 100%;
+  height: 95%;
   padding: 3px 0;
   top: 0;
   border-bottom: 3px solid #99E2D0;
@@ -273,6 +283,7 @@ section { /* Règle commune */
 button { /* Style commun aux boutons */
   background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
   height: 50px;
+  width: 218px;
   border-radius: 39px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
   border: none;
@@ -283,11 +294,12 @@ button:hover { /* Effet de survol boutons */
   opacity: 0.9;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 }
-button.button--explore {
-  width: 218px;
+button.button--order {
+  width: 185px;
 }
 
-.step-card { /* Carte step accueil */
+/* Carte page accueil */
+.step-card { /* Carte step */
   display: flex;
   position: relative;
   height: 73px;
@@ -297,11 +309,14 @@ button.button--explore {
   border-radius: 19px;
   background-color: #F6F6F6;
   box-shadow: var(--tab-shadow-dft);
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 .step-card:hover {
   box-shadow: var(--tab-shadow-hover);
   background-color: rgba(147, 86, 220, 0.11);
+}
+.step-card:hover > i {
+  color: #9356DC;
 }
 .step-card .circle-num {
   position: absolute;
@@ -317,6 +332,7 @@ button.button--explore {
 .step-card i {
   width: 20px;
   font-size: 20px;
+  transition: 0.3s ease;
 }
 .step-card p {
   margin-left: 28px;
@@ -345,7 +361,7 @@ button.button--explore {
 
 .card1 { /* Carte numérotée pour attribuer règle de position d'image  */ }
 .card1 img {
-  object-position: 0 -50px;
+  object-position: 0 -40px;
 }
 
 .card2 img {
@@ -353,13 +369,14 @@ button.button--explore {
 }
 
 .card3 img {
-  object-position: 0 -50px;
+  object-position: 0 -40px;
 }
 
 .card4 img {
-  object-position: 0 -55px;
+  object-position: 0 -45px;
 }
 
+/* Cartes pages menus */
 .dish-card {
   display: flex;
   align-items: center;
@@ -368,8 +385,12 @@ button.button--explore {
   margin: 14px 0;
   border-radius: 15px;
   background-color: white;
-  box-shadow: var(--tab-shadow-dft);
+  box-shadow: var(--card-shadow-dft);
   overflow: hidden;
+  transition: 0.3s ease;
+}
+.dish-card:hover {
+  box-shadow: var(--card-shadow-hover);
 }
 .dish-card .dish-card-txt {
   display: flex;
@@ -377,7 +398,7 @@ button.button--explore {
   position: relative;
   height: 100%;
   width: 100%;
-  padding: 12px 12px 12px 10px;
+  padding: 12px 22px 12px 10px;
   justify-content: space-between;
   align-content: center;
 }
@@ -454,7 +475,7 @@ button.button--explore {
 
 footer {
   display: block;
-  padding: 24px 0 33px 25px;
+  padding: 24px 0 27px 25px;
   background-color: #353535;
 }
 footer h4 {

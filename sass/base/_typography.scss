@@ -7,7 +7,7 @@
 $font-logo: 'Shrikhand', cursive;
 $font-txt: 'Roboto', sans-serif;
 
-
+/* Page d'accueil */
 
 .main--home {  /* Container main page Accueil */
     font-family: $font-txt;
@@ -25,6 +25,7 @@ h2 {    /* Titre des containers */
     &.rest-title {      /* Règle pour pages menu */
         font-family: $font-logo;
         font-size: 28px;
+        font-weight: 400;
     }
 }
 
@@ -68,6 +69,8 @@ figcaption {    /* Contient l'image de carte page accueil */
     }
 }
 
+/* Page menu */
+
 .dish {
     font-family: $font-txt;
 
@@ -97,6 +100,7 @@ figcaption {    /* Contient l'image de carte page accueil */
     }
 }
 
+/* Footer */
 
 footer {
     color: white;
@@ -104,7 +108,7 @@ footer {
     h4 {
         font-size: 18px;
         font-family: $font-logo;
-        font-weight: normal;
+        font-weight: 400;
     }
 
     li {
