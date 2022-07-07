@@ -12,9 +12,8 @@ header {
         justify-content: center;
         align-items: center;
         height: 100%;
-        width: 36px;
+        width: 63px;
         left: 0;
-        padding: 8px 0 0 0;
         text-decoration: none;
         color: black;
     }
@@ -24,5 +23,10 @@ header {
         width: 162px;
         padding: 8px 0 0 0;
         object-fit: contain;
+    }
+
+    i {
+        font-size: 21px;
+        padding: 26px 0 21px 0;
     }
 }
