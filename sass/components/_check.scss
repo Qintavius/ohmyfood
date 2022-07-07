@@ -1,0 +1,35 @@
+.dish-check {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    right: 0;
+    top: 0;
+    width: 59px;
+    height: 100%;
+    transform: translateX(100%);
+    background-color: $color-tertiary;
+    transition: all 0.3s ease;
+
+    .fa-circle-check {
+        transform: rotate(360deg);
+        transition: 0.3s ease;
+    }
+}
+
+.dish-card {
+
+    &:hover .dish-check {
+        transform: translateX(0%);
+
+        .fa-circle-check {
+            transform: rotate(0deg);
+        }
+    }
+
+    &:hover .dish-card-subtxt {
+        width: 80%;
+    }
+}
