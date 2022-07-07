@@ -1,4 +1,4 @@
-.icon_fav {
+.icon_fav {     /* Zone de clique étendu pour icone favoris */
     display: flex;
     position: absolute;
     width: 77px;
@@ -9,13 +9,13 @@
     align-items: center;
     cursor: pointer;
 
-    &--menu {
+    &--menu {   /* Règle spécifique pages menu */
         right: 14px;
     }
 
-    &:hover .fa-heart {
+    &:hover .fa-heart {     /* Animation icone au survol de la zone de clique étendu */
         -webkit-text-stroke: 1.5px transparent;
-        &::after {
+        &::after {      /* Replicat visible au survol */
             opacity: 1;
             font-size: 23px;
             padding: 2px;
@@ -23,7 +23,7 @@
     }
 }
 
-.fa-heart {
+.fa-heart {     /* Icone favoris */
     position: relative;
     font-size: 23px;
     background: transparent;
@@ -32,10 +32,10 @@
     -webkit-text-stroke: 1.5px black;
     transition: 0.6s linear;
 
-    &::after {
+    &::after {      /* Replicat icone favoris en transparence */
         content: "\f004";
         font-size: 0px;
-        padding: 13px;
+        padding: 13px;  /* fait apparaitre l'icone au centre */
         position: absolute;
         top: -2px;
         left: -2px;

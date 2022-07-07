@@ -1,8 +1,8 @@
-section {
+section {   /* Règle commune */
     display: flex;
 }
 
-.location, .explore {
+.location, .explore {   /* règle container location + explore */
     justify-content: center;
 }
 
@@ -38,7 +38,7 @@ section {
     }
 }
 
-.step {
+.step {     /* Container Fonctionnement */
     flex-direction: column;
     padding: 36px 19px 42px 19px;
 
@@ -47,7 +47,7 @@ section {
     }
 }
 
-.rest {
+.rest {     /* Container Restaurants */
     flex-direction: column;
     padding: 54px 19px 62px 19px;
     background-color: $color-light-gray;
@@ -70,7 +70,7 @@ section {
     }
 }
 
-.main-menu {
+.main-menu {    /* Container principal page menu */
     width: 100%;
 
     .menu-top-img {
@@ -78,14 +78,14 @@ section {
     }
 }
 
-.menu-top-img {
+.menu-top-img {     /* Container image sous le header page menu */
     img {
         width: 100%;
         object-fit: cover;
     }
 }
 
-.menu {
+.menu {     /* Container menu */
     position: relative;
     margin-top: -53px;
     width: 100%;

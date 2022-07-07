@@ -1,8 +1,13 @@
+/* Importation des fonts */
+
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
 
+/* Variables fonts */
 $font-logo: 'Shrikhand', cursive;
 $font-txt: 'Roboto', sans-serif;
+
+
 
 .main--home {  /* Container main page Accueil */
     font-family: $font-txt;
@@ -17,7 +22,7 @@ h2 {    /* Titre des containers */
     font-size: 24px;
     font-weight: 700;
 
-    &.rest-title {
+    &.rest-title {      /* Règle pour pages menu */
         font-family: $font-logo;
         font-size: 28px;
     }
@@ -48,15 +53,15 @@ button {    /* boutons explore et order */
     }
 }
 
-figcaption {
-    p:nth-child(1) {
+figcaption {    /* Contient l'image de carte page accueil */
+    p:nth-child(1) {    /* Nom du restaurant */
         font-size: 18px;
         font-weight: 700;
         text-transform: capitalize;
         color: black;
     }
 
-    p {
+    p {     /* Emplacement restaurant page accueil */
         font-size: 18px;
         font-weight: 400;
         color: $color-font-gray;
