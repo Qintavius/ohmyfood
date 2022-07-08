@@ -10,35 +10,167 @@
 </head>
 <body>
     <header>
-        <a href=""><i class="fa-solid fa-arrow-left"></i></a> <!-- flèche retour acceuil -->
         <img src="assets/logo/ohmyfood.png" alt="logo homyfood">    <!-- logo homyfood -->
+        <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
     </header>
 
-    <main class="main__menu">
-        <figure class="menu-top-img">
+    <main class="main-menu">   <!--  Container principal -->
+        <section class="menu-top-img">
             <img src="assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
-        </figure>
+        </section>
 
-        <article class="menu-card"> <!-- container carte des menus -->
-            <h1 class="rest-title">La palette du goût</h1>  <!-- Nom du restaurant -->
-            <div class="fav-heart">    <!-- Icone favoris -->
-                <i class="fa-regular fa-heart"></i>
+        <section class="menu">
+            <h2 class="rest-title">à la française
+                <div class="icon_fav icon_fav--menu"> <!-- Icone favoris -->
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+            </h2>
+
+            <article class="dish">
+                <h3 class="dish-title">Entrées</h3>
+                <!-- Début carte plat -->
+                <div class="dish-card">
+                    <div class="dish-card-txt">
+                        <h4>Tartare de poulpe acidulé</h4>
+                        <div class="dish-card-subtxt">
+                            <p class="dish-subtxt">Aux zests d’orange</p>
+                            <p class="dish-price">25€</p>
+                            <div class="dish-check">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>  <!-- Fin carte plat -->
+
+                <div class="dish-card">
+                    <div class="dish-card-txt">
+                        <h4>Velouté de légumes d’anatan</h4>
+                        <div class="dish-card-subtxt">
+                            <p class="dish-subtxt">Carotte, panais, topinambour</p>
+                            <p class="dish-price">35€</p>
+                            <div class="dish-check">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card">
+                    <div class="dish-card-txt">
+                        <h4>Soupe à l’oignon</h4>
+                        <div class="dish-card-subtxt">
+                            <p class="dish-subtxt">Revisitée</p>
+                            <p class="dish-price">20€</p>
+                            <div class="dish-check">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="dish">
+                <h3 class="dish-title">Plats</h3>
+                <!-- Début carte plat -->
+                <div class="dish-card">
+                    <div class="dish-card-txt">
+                        <h4>Coquilles Saint-Jacques</h4>
+                        <div class="dish-card-subtxt">
+                            <p class="dish-subtxt">Accompagnées d’une purée de panais</p>
+                            <p class="dish-price">40€</p>
+                            <div class="dish-check">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>  <!-- Fin carte plat -->
+
+                <div class="dish-card">
+                    <div class="dish-card-txt">
+                        <h4>Magret de canard</h4>
+                        <div class="dish-card-subtxt">
+                            <p class="dish-subtxt">Et parmentier de pommes de terres</p>
+                            <p class="dish-price">35€</p>
+                            <div class="dish-check">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card">
+                    <div class="dish-card-txt">
+                        <h4>Pigeonneau d’Ille-et-Vilaine</h4>
+                        <div class="dish-card-subtxt">
+                            <p class="dish-subtxt">Sur son lit de gnocchis aux légumes</p>
+                            <p class="dish-price">44€</p>
+                            <div class="dish-check">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="dish">
+                <h3 class="dish-title">Desserts</h3>
+                <!-- Début carte plat -->
+                <div class="dish-card">
+                    <div class="dish-card-txt">
+                        <h4>Pétales de violettes glaçés</h4>
+                        <div class="dish-card-subtxt">
+                            <p class="dish-subtxt">Et purée de noisettes</p>
+                            <p class="dish-price">18€</p>
+                            <div class="dish-check">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>  <!-- Fin carte plat -->
+
+                <div class="dish-card">
+                    <div class="dish-card-txt">
+                        <h4>Fondant au chocolat</h4>
+                        <div class="dish-card-subtxt">
+                            <p class="dish-subtxt">Revisité</p>
+                            <p class="dish-price">22€</p>
+                            <div class="dish-check">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dish-card">
+                    <div class="dish-card-txt">
+                        <h4>Millefeuille croustillant</h4>
+                        <div class="dish-card-subtxt">
+                            <p class="dish-subtxt">Myrtilles et pâte d’amande</p>
+                            <p class="dish-price">23€</p>
+                            <div class="dish-check">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <div class="order">
+                <button onclick="window.location.href='#'" class="button button--order">Commander</button>
             </div>
 
-            <section class="menu-entree">    <!-- section entrée -->
-                <h3 class="course-title">Entrée</h3>    <!-- titre de la section -->
-                <div class="course-tab">    <!-- container de la carte -->
-                    <h4>Fricassé d'escargot</h4>    <!-- titre du produit -->
-                    <p class="course-tab__recipe">Au piment d'Espelette</p>  <!-- description du produit -->
-                    <p class="course-tab__price">25€</p>    <!-- prix du produit -->
-                    <span class="course-tab__check">    <!-- icone de validation du produit -->
-                        <i class="fa-solid fa-circle-check"></i>
-                    </span>
-                </div>  <!-- Fin container carte -->
-            </section>  <!-- Fin section entrée -->
-        </article>
+        </section>
     </main>
 
-
+    <footer>
+        <h4>ohmyfood</h4> <!-- Titre section -->
+        <ul> <!-- Liste footer -->
+            <li><i class="fa-solid fa-utensils"></i>Proposer un restaurant</li>
+            <li><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</li>
+            <li>Mentions légales</li>
+            <li>Contact</li>
+        </ul>
+    </footer>
+    
 </body>
 </html>
