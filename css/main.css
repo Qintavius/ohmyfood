@@ -137,6 +137,43 @@ footer li a {
   font-size: 34px;
 }
 
+.loading {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #9356DC;
+  z-index: 100;
+  animation: loading-transparent 3s forwards;
+}
+.loading .span-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.loading .loading-ball {
+  position: absolute;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  right: 19%; /* mobile */
+  top: 46%;
+  background-color: #FF79DA;
+  animation: ball-jump 2s forwards;
+  opacity: 0;
+}
+.loading span {
+  display: inline-block;
+  transition: all 0.2s;
+  animation: loading-letter 2s forwards;
+}
+
 header {
   display: flex;
   position: relative;
@@ -290,6 +327,19 @@ section { /* Règle commune */
   padding: 3px 0;
   top: 0;
   border-bottom: 3px solid #99E2D0;
+}
+
+footer {
+  display: block;
+  padding: 24px 0 27px 25px;
+  background-color: #353535;
+}
+footer h4 {
+  margin-bottom: 13px;
+}
+footer i {
+  font-size: 13px;
+  margin-right: 10px;
 }
 
 button { /* Style commun aux boutons */
@@ -486,19 +536,6 @@ button.button--order {
   transition: 0.3s linear;
 }
 
-footer {
-  display: block;
-  padding: 24px 0 27px 25px;
-  background-color: #353535;
-}
-footer h4 {
-  margin-bottom: 13px;
-}
-footer i {
-  font-size: 13px;
-  margin-right: 10px;
-}
-
 .dish-check {
   display: flex;
   position: absolute;
@@ -533,43 +570,7 @@ footer i {
   width: 80%;
 }
 
-.loading {
-  display: flex;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  background-color: #9356DC;
-  z-index: 100;
-  animation: loading-transparent 3s forwards;
-}
-.loading .span-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  height: 100%;
-  width: 100%;
-}
-.loading .loading-ball {
-  position: absolute;
-  text-align: center;
-  width: 20px;
-  height: 20px;
-  border-radius: 20px;
-  right: 19%; /* mobile */
-  top: 46%;
-  background-color: #FF79DA;
-  animation: ball-jump 2s forwards;
-  opacity: 0;
-}
-.loading span {
-  display: inline-block;
-  transition: all 0.2s;
-  animation: loading-letter 2s forwards;
-}
-
+/* Animation loading page */
 @keyframes loading-letter {
   0% {
     transform: translateY(0);
@@ -675,5 +676,8 @@ footer i {
 .loading span:nth-child(9) {
   animation-delay: 0.9s;
 }
+
+/* Fin animation loading page */
+/* Animation oredre apparition cartes */
 
 /*# sourceMappingURL=main.css.map */
