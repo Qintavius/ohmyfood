@@ -7,15 +7,15 @@
     font-size: 20px;
     right: 0;
     top: 0;
-    width: 59px;
+    width: 61px;
     height: 100%;
-    transform: translateX(100%);
+    transform: translateX(104%);
     background-color: $color-tertiary;
     transition: all 0.3s ease;
 
     .fa-circle-check {
         transform: rotate(360deg);
-        transition: 0.3s ease;
+        transition: 0.4s ease;
     }
 }
 
@@ -30,7 +30,8 @@
     }
 
     &:hover h4 {
-        width: 80%;
+        width: 72%;
+        padding-right: 10px;
     }
 
     &:hover .dish-card-subtxt {
