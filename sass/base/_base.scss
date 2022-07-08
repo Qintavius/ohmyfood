@@ -11,6 +11,10 @@ body, html {
     overflow-x: hidden;
 }
 
+header, main, footer {
+    z-index: 10;
+}
+
 /* Charte couleur */
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;

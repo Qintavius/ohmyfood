@@ -1,0 +1,40 @@
+.loading {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-primary;
+    z-index: 100;
+    animation: loading-transparent 3s forwards;
+
+    .span-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+
+
+    .loading-ball {
+        position: absolute;
+        text-align: center;
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
+        right: 19%;     /* mobile */
+        top: 46%;
+        background-color: $color-secondary;
+        animation: ball-jump 2s forwards;
+        opacity: 0;
+    }
+
+    span {
+        display: inline-block;
+        transition: all 0.2s;
+        animation: loading-letter 2s forwards;
+    }
+}
