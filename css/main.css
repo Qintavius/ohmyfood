@@ -79,13 +79,21 @@ figcaption { /* Contient l'image de carte page accueil */ }
 figcaption p:nth-child(1) { /* Nom du restaurant */
   font-size: 18px;
   font-weight: 700;
+  margin-right: 77px;
   text-transform: capitalize;
   color: black;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 figcaption p { /* Emplacement restaurant page accueil */
   font-size: 18px;
   font-weight: 400;
+  margin-right: 77px;
   color: #696969;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 /* Page menu */
@@ -137,11 +145,35 @@ footer li a {
   font-size: 34px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 933px) {
+@media screen and (min-width: 650px) and (max-width: 933px) {
   .header--fixed {
     position: fixed;
     background-color: white;
     box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .header--fixed .order--wide {
+    display: block;
+    position: inherit;
+    right: 29px;
+  }
+  .header--fixed .order--wide button {
+    height: 45px;
+    width: 130px;
+  }
+  section {
+    /* Pages menu */
+  }
+  section.location--mobile {
+    display: none;
+  }
+  section.location--wide {
+    display: flex;
+    margin-bottom: 27px;
+    background-color: white;
+    box-shadow: none;
+  }
+  section.explore { /* Container explore accueil */
+    padding: 10%;
   }
   section.step {
     position: relative;
@@ -154,10 +186,9 @@ footer li a {
   section.step h2 {
     position: absolute;
     top: 0;
-    font-size: 30px;
+    font-size: 24px;
   }
   section.step .step-card {
-    position: relative;
     flex-direction: column;
     justify-content: center;
     width: 198px;
@@ -168,7 +199,6 @@ footer li a {
     box-shadow: none;
   }
   section.step .step-card .circle-num {
-    position: absolute;
     left: 50%;
     top: 33%;
     width: 33px;
@@ -184,38 +214,52 @@ footer li a {
     margin-left: 0;
     margin-top: 12%;
   }
-  section.rest {
+  section.rest { /* Section restaurants */
     padding: 10% 15%;
   }
+  section.rest h2 {
+    text-align: center;
+    margin: 0 0 40px 0;
+    font-size: 24px;
+  }
   section.rest ul {
-    row-gap: 48px;
+    row-gap: 28px;
   }
-  section.rest ul li {
-    height: 195px;
+  section.rest ul li { /* Container carte restaurant */
+    height: 175px;
   }
-  section.rest ul li .rest-card { /* Cartes restaurants */ }
-  section.rest ul li .rest-card figure {
+  section .rest-card { /* Cartes restaurants */ }
+  section .rest-card figure {
     display: flex;
     flex-direction: row-reverse;
     position: relative;
     width: 100%;
     height: 100%;
   }
-  section.rest ul li .rest-card figure img {
-    vertical-align: none; /* Enlève  l'espace entre figure et figcaption */
-  }
-  section.rest ul li .rest-card figure figcaption {
+  section .rest-card figure figcaption {
     position: absolute;
     width: 55%;
     height: 100%;
     padding: 31px 0 31px 27px;
   }
-  section.rest ul li .rest-card figure figcaption :nth-child(1) {
-    margin-bottom: 10px;
+  section .rest-card figure figcaption :nth-child(1) { /* Nom restaurant */
+    margin-bottom: 15px;
+  }
+  section .rest-card figure figcaption .icon_fav { /* Zone de clique icone favoris */
+    align-items: flex-end;
+    padding-bottom: 13px;
+  }
+  section .rest-card figure img {
+    position: absolute;
+    width: 45%;
+    left: 0;
   }
   section.menu {
-    padding: 10% 30%;
+    padding: 10% 25%;
     border-radius: 0;
+  }
+  section.menu .order--mobile {
+    display: none;
   }
 }
 .loading {
@@ -301,6 +345,10 @@ section { /* Règle commune */
 }
 .location i {
   margin-right: 17px;
+}
+
+.location--wide {
+  display: none;
 }
 
 .explore { /* Container explore accueil */
@@ -441,6 +489,10 @@ button.button--order {
   width: 185px;
 }
 
+.order--wide {
+  display: none;
+}
+
 /* Carte page accueil */
 .step-card { /* Carte step */
   display: flex;
@@ -500,23 +552,6 @@ button.button--order {
 }
 .rest-card figure figcaption :nth-child(1) {
   margin-bottom: 4px;
-}
-
-.card1 { /* Carte numérotée pour attribuer règle de position d'image  */ }
-.card1 img {
-  object-position: 0 -40px;
-}
-
-.card2 img {
-  object-position: 0 -150px;
-}
-
-.card3 img {
-  object-position: 0 -40px;
-}
-
-.card4 img {
-  object-position: 0 -45px;
 }
 
 /* Cartes pages menus */
