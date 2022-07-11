@@ -1,23 +1,26 @@
 @media screen and (min-width:650px) and (max-width:933px) {
-    .header--fixed {
+
+    .header--fixed {    /* Header */
         position: fixed;
         background-color: white;
         box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
 
-        .order--wide {
+        .order--wide {      /* bouton commander ver. tablette apparent */
             display: block;
             position: inherit;
             right: 29px;
-            button {
+            button {    /* modif taille bouton */
                 height: 45px;
                 width: 130px;
             }
         }
-    }
+    }   /* Fin header */
 
-    section {
+    section {       /* Sections */
 
-        &.location--mobile {
+        /* Page accueil */
+
+        &.location--mobile {    /* Localisation */
             display: none;
         }
 
@@ -26,13 +29,13 @@
             margin-bottom: 27px;
             background-color: white;
             box-shadow: none;
-        }
+        }   /* Fin Localisation */
 
         &.explore {      /* Container explore accueil */
             padding: 10%;
         }
 
-        &.step {
+        &.step {    /* section étapes fonctionnement*/
             position: relative;
             margin: 10% 5% 5% 5%;
             padding-top: 8%;
@@ -40,13 +43,13 @@
             justify-content: space-evenly;
             align-items: center;
 
-            h2 {
+            h2 {    /* Titre fonctionnement */
                 position: absolute;
                 top: 0;
                 font-size: 24px;
             }
 
-            .step-card {
+            .step-card {    /* cartes étapes */
                 flex-direction: column;
                 justify-content: center;
                 width: 198px;
@@ -74,8 +77,8 @@
                     margin-left: 0;
                     margin-top: 12%;
                 }
-            }
-        }
+            }   /* Fin cartes étape fonctionnement */
+        }   /* Fin section étapes fonctionnment */
 
         &.rest {    /* Section restaurants */
             padding: 10% 15%;
@@ -89,13 +92,14 @@
             
             ul {
                 row-gap: 28px;
-                li {        /* Container carte restaurant */
+                li {        /* Carte restaurant */
                     height: 175px;
                 }
             }
-        }
+        }   /* Fin section restaurants */
 
-        .rest-card {    /* Cartes restaurants */
+        .rest-card {    /* zone cliquable cartes restaurants */
+            
             figure {
                 display: flex;
                 flex-direction: row-reverse;
@@ -124,17 +128,29 @@
                     left: 0;
                 }
             }
-        }
+        }   /* Fin cartes restaurants */
 
         /* Pages menu */
 
-        &.menu {
+        &.menu {    /* Section principale menu */
             padding: 10% 25%;
             border-radius: 0;
+            margin-top: 0;
 
-            .order--mobile {
+            .order--mobile {    /* bouton commander ver. mobile retiré */
                 display: none;
             }
-        }
-    }
+
+            .dish-card {    /* carte menu */
+
+                &:hover h4 {
+                    width: 75%;
+                }
+            
+                &:hover .dish-card-subtxt {
+                    width: 85%;
+                }
+            }
+        }   /* Fin menu */
+    }   /* Fin sections */
 }
