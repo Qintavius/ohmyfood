@@ -1,5 +1,9 @@
 @media screen and (min-width:650px) and (max-width:933px) {
 
+    .loading-ball {     /* Animation balle */
+        right: 35%;     /* tablette 35% */
+    }
+
     .header--fixed {    /* Header */
         position: fixed;
         background-color: white;
