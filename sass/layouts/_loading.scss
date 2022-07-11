@@ -3,38 +3,47 @@
     position: fixed;
     width: 100%;
     height: 100%;
+    transform: scale(1);
+    background-color: $color-primary;
     justify-content: center;
     align-items: center;
-    background-color: $color-primary;
     z-index: 100;
-    animation: loading-transparent 2.6s forwards;
+    animation: loading-header 2.5s forwards;
+    animation-delay: 1.5s;
 
     .span-container {
         display: flex;
+        position: relative;
         align-items: center;
         justify-content: center;
-        position: relative;
-        height: 100%;
         width: 100%;
-    }
+        height: 100%;
 
-
-    .loading-ball {
-        position: absolute;
-        text-align: center;
-        width: 20px;
-        height: 20px;
-        border-radius: 20px;
-        right: 19%;     /* mobile 19% */
-        top: 46%;
-        background-color: $color-secondary;
-        animation: ball-jump 1.8s forwards;
-        opacity: 0;
+        .underline {
+            display: flex;
+            position: relative;
+            width: 100%;
+            overflow-y: hidden;
+            text-align: center;
+            justify-content: center;
+            z-index: 200;
+        }
     }
 
     span {
         display: inline-block;
+        position: relative;
+        transform: translateY(50px);
         transition: all 0.2s;
         animation: loading-letter 1.8s forwards;
+    }
+
+    .circle {
+        position: absolute;
+        height: 0;
+        width: 0;
+        transform: translateY(-5px);
+        animation-delay: 2.5s;
+        animation: loading-circle 2.1s forwards;
     }
 }
