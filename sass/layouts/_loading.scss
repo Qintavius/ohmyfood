@@ -7,7 +7,7 @@
     align-items: center;
     background-color: $color-primary;
     z-index: 100;
-    animation: loading-transparent 3s forwards;
+    animation: loading-transparent 2.6s forwards;
 
     .span-container {
         display: flex;
@@ -28,13 +28,13 @@
         right: 19%;     /* mobile */
         top: 46%;
         background-color: $color-secondary;
-        animation: ball-jump 2s forwards;
+        animation: ball-jump 1.8s forwards;
         opacity: 0;
     }
 
     span {
         display: inline-block;
         transition: all 0.2s;
-        animation: loading-letter 2s forwards;
+        animation: loading-letter 1.8s forwards;
     }
 }
