@@ -58,14 +58,22 @@ figcaption {    /* Contient l'image de carte page accueil */
     p:nth-child(1) {    /* Nom du restaurant */
         font-size: 18px;
         font-weight: 700;
+        margin-right: 77px;
         text-transform: capitalize;
         color: black;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
 
     p {     /* Emplacement restaurant page accueil */
         font-size: 18px;
         font-weight: 400;
+        margin-right: 77px;
         color: $color-font-gray;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
 }
 

@@ -17,6 +17,10 @@ section {   /* Règle commune */
     }
 }
 
+.location--wide {
+    display: none;
+}
+
 .explore {      /* Container explore accueil */
     flex-direction: column;
     height: auto;
