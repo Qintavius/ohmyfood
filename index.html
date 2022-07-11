@@ -24,13 +24,13 @@
         </div>
     </div>
 
-    <header>
+    <header class="header">
         <img src="assets/logo/ohmyfood.png" alt="logo homyfood">    <!-- logo homyfood -->
     </header>
 
     <main class="main--home">   <!--  Container principal parent de section 1, 2, 3 et 4 -->
 
-        <section class="location">  <!-- Section 1 localisation -->
+        <section class="location location--mobile">  <!-- Section 1 localisation -->
             <i class="fa-solid fa-location-dot"></i>
             <form action="search">Paris, Belleville</form>
         </section>
@@ -39,6 +39,12 @@
             <div class="about">
                 <h2>Réservez le menu qui vous convient</h2>
                 <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
+
+                <section class="location location--wide">  <!-- Section 1 localisation -->
+                    <i class="fa-solid fa-location-dot"></i>
+                    <form action="search">Paris, Belleville</form>
+                </section>
+
                 <button onclick="window.location.href='#rest'" class="button">Explorer nos restaurants</button>
             </div>
         </section>
@@ -70,7 +76,7 @@
                         <figure class="card1">
                             <img src="assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
                             <figcaption>
-                                <p>La palette du goût</p>  <!-- Titre restaurant -->
+                                <p>La palette du goût</p>  <!-- Nom restaurant -->
                                 <p>Ménilmontant</p> <!-- Recette -->
                                 <div class="icon_fav">  <!-- Icone favoris -->
                                     <i class="fa-solid fa-heart"></i>
