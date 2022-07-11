@@ -26,7 +26,7 @@
     }
 }
 
-@keyframes ball-jump {
+@keyframes ball-jump {  /* Animation balle */
     0% {
         right: 19%;
         top: 46%;
@@ -65,7 +65,7 @@
     }
 }
 
-@keyframes loading-transparent {
+@keyframes loading-transparent {    /* Animation transparence header */
     0% {
         opacity: 1;
     }
@@ -81,7 +81,7 @@
     }
 }
 
-.loading {
+.loading {  /* Animation lettresa    */
     
     span {
         &:nth-child(1) {
