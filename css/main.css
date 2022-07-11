@@ -146,24 +146,34 @@ footer li a {
 }
 
 @media screen and (min-width: 650px) and (max-width: 933px) {
-  .header--fixed {
+  .loading-ball { /* Animation balle */
+    right: 35%; /* tablette 35% */
+  }
+  .header--fixed { /* Header */
     position: fixed;
     background-color: white;
     box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
   }
-  .header--fixed .order--wide {
+  .header--fixed .order--wide { /* bouton commander ver. tablette apparent */
     display: block;
     position: inherit;
     right: 29px;
   }
-  .header--fixed .order--wide button {
+  .header--fixed .order--wide button { /* modif taille bouton */
     height: 45px;
     width: 130px;
   }
-  section {
+  /* Fin header */
+  section { /* Sections */
+    /* Page accueil */
+    /* Fin Localisation */
+    /* Fin section étapes fonctionnment */
+    /* Fin section restaurants */
+    /* Fin cartes restaurants */
     /* Pages menu */
+    /* Fin menu */
   }
-  section.location--mobile {
+  section.location--mobile { /* Localisation */
     display: none;
   }
   section.location--wide {
@@ -175,20 +185,21 @@ footer li a {
   section.explore { /* Container explore accueil */
     padding: 10%;
   }
-  section.step {
+  section.step { /* section étapes fonctionnement*/
     position: relative;
     margin: 10% 5% 5% 5%;
     padding-top: 8%;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    /* Fin cartes étape fonctionnement */
   }
-  section.step h2 {
+  section.step h2 { /* Titre fonctionnement */
     position: absolute;
     top: 0;
     font-size: 24px;
   }
-  section.step .step-card {
+  section.step .step-card { /* cartes étapes */
     flex-direction: column;
     justify-content: center;
     width: 198px;
@@ -225,10 +236,10 @@ footer li a {
   section.rest ul {
     row-gap: 28px;
   }
-  section.rest ul li { /* Container carte restaurant */
+  section.rest ul li { /* Carte restaurant */
     height: 175px;
   }
-  section .rest-card { /* Cartes restaurants */ }
+  section .rest-card { /* zone cliquable cartes restaurants */ }
   section .rest-card figure {
     display: flex;
     flex-direction: row-reverse;
@@ -254,13 +265,22 @@ footer li a {
     width: 45%;
     left: 0;
   }
-  section.menu {
+  section.menu { /* Section principale menu */
     padding: 10% 25%;
     border-radius: 0;
+    margin-top: 0;
   }
-  section.menu .order--mobile {
+  section.menu .order--mobile { /* bouton commander ver. mobile retiré */
     display: none;
   }
+  section.menu .dish-card { /* carte menu */ }
+  section.menu .dish-card:hover h4 {
+    width: 75%;
+  }
+  section.menu .dish-card:hover .dish-card-subtxt {
+    width: 85%;
+  }
+  /* Fin sections */
 }
 .loading {
   display: flex;
@@ -271,7 +291,7 @@ footer li a {
   align-items: center;
   background-color: #9356DC;
   z-index: 100;
-  animation: loading-transparent 3s forwards;
+  animation: loading-transparent 2.6s forwards;
 }
 .loading .span-container {
   display: flex;
@@ -287,16 +307,16 @@ footer li a {
   width: 20px;
   height: 20px;
   border-radius: 20px;
-  right: 19%; /* mobile */
+  right: 19%; /* mobile 19% */
   top: 46%;
   background-color: #FF79DA;
-  animation: ball-jump 2s forwards;
+  animation: ball-jump 1.8s forwards;
   opacity: 0;
 }
 .loading span {
   display: inline-block;
   transition: all 0.2s;
-  animation: loading-letter 2s forwards;
+  animation: loading-letter 1.8s forwards;
 }
 
 header {
@@ -683,7 +703,7 @@ button.button--order {
   padding-right: 10px;
 }
 .dish-card:hover .dish-card-subtxt {
-  width: 80%;
+  width: 82%;
 }
 
 /* Animation loading page */
@@ -712,7 +732,7 @@ button.button--order {
     opacity: 0;
   }
 }
-@keyframes ball-jump {
+@keyframes ball-jump { /* Animation balle */
   0% {
     right: 19%;
     top: 46%;
@@ -750,7 +770,7 @@ button.button--order {
     background-color: white;
   }
 }
-@keyframes loading-transparent {
+@keyframes loading-transparent { /* Animation transparence header */
   0% {
     opacity: 1;
   }
@@ -765,35 +785,76 @@ button.button--order {
     z-index: -1;
   }
 }
+.loading { /* Animation lettresa    */ }
 .loading span:nth-child(1) {
-  animation-delay: 0.1s;
+  animation-delay: 0.08s;
 }
 .loading span:nth-child(2) {
-  animation-delay: 0.2s;
+  animation-delay: 0.16s;
 }
 .loading span:nth-child(3) {
-  animation-delay: 0.3s;
+  animation-delay: 0.24s;
 }
 .loading span:nth-child(4) {
-  animation-delay: 0.4s;
+  animation-delay: 0.32s;
 }
 .loading span:nth-child(5) {
-  animation-delay: 0.5s;
+  animation-delay: 0.4s;
 }
 .loading span:nth-child(6) {
-  animation-delay: 0.6s;
+  animation-delay: 0.48s;
 }
 .loading span:nth-child(7) {
-  animation-delay: 0.7s;
+  animation-delay: 0.56s;
 }
 .loading span:nth-child(8) {
-  animation-delay: 0.8s;
+  animation-delay: 0.64s;
 }
 .loading span:nth-child(9) {
-  animation-delay: 0.9s;
+  animation-delay: 0.72s;
 }
 
 /* Fin animation loading page */
 /* Animation oredre apparition cartes */
+@media screen and (min-width: 650px) and (max-width: 933px) {
+  @keyframes ball-jump { /* Animation balle */
+    0% {
+      right: 35%;
+      top: 46%;
+      opacity: 0;
+    }
+    20% {
+      right: 35%;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 20px;
+      opacity: 1;
+    }
+    50% {
+      right: 0;
+      top: 0;
+      border-radius: 0px;
+      width: 100%;
+      height: 63px;
+    }
+    68% {
+      right: 0;
+      top: 0;
+      width: 100%;
+      height: 63px;
+      border-radius: 0px;
+      background-color: white;
+    }
+    100% {
+      right: 0;
+      top: 0;
+      width: 100%;
+      height: 63px;
+      border-radius: 0px;
+      background-color: white;
+    }
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
