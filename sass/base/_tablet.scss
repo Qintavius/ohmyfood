@@ -132,10 +132,10 @@
 
         /* Pages menu */
 
-        &.menu {    /* Section principale menu */
+        &.menu {    /* Section menu */
             padding: 10% 25%;
             border-radius: 0;
-            margin-top: 0;
+            margin: 0;
 
             .order--mobile {    /* bouton commander ver. mobile retiré */
                 display: none;

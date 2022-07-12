@@ -81,8 +81,9 @@ section {   /* Règle commune */
 
 .main-menu {    /* Container principal page menu */
     width: 100%;
+    height: auto;
 
-    .menu-top-img {     /* Container image sous le header page menu */
+    .menu-top-img {    /* Container image sous le header page menu */
         height: 267px;
 
         img {
