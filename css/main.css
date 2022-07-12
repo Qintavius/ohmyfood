@@ -145,7 +145,7 @@ footer li a {
   font-size: 34px;
 }
 
-@media screen and (min-width: 650px) and (max-width: 933px) {
+@media screen and (min-width: 650px) and (max-width: 1079px) {
   .header--fixed { /* Header */
     position: fixed;
     background-color: white;
@@ -223,7 +223,7 @@ footer li a {
     margin-top: 12%;
   }
   section.rest { /* Section restaurants */
-    padding: 10% 15%;
+    align-items: center;
   }
   section.rest h2 {
     text-align: center;
@@ -231,6 +231,7 @@ footer li a {
     font-size: 24px;
   }
   section.rest ul {
+    width: 60%;
     row-gap: 28px;
   }
   section.rest ul li { /* Carte restaurant */
@@ -279,7 +280,7 @@ footer li a {
   }
   /* Fin sections */
 }
-@media screen and (min-width: 934px) {
+@media screen and (min-width: 1080px) {
   .header--fixed { /* Header */
     position: fixed;
     justify-content: flex-start;
@@ -380,7 +381,7 @@ footer li a {
     margin-top: 12%;
   }
   section.rest { /* Section restaurants */
-    padding: 5% 30%;
+    align-items: center;
   }
   section.rest h2 {
     text-align: center;
@@ -388,6 +389,7 @@ footer li a {
     font-size: 30px;
   }
   section.rest ul {
+    width: 50%;
     row-gap: 38px;
   }
   section.rest ul li { /* Carte restaurant */
@@ -599,6 +601,7 @@ section { /* Règle commune */
 .rest ul {
   display: flex;
   flex-direction: column;
+  width: 100%;
   row-gap: 18px;
 }
 .rest ul li {

@@ -1,4 +1,4 @@
-@media screen and (min-width:650px) and (max-width:933px) {
+@media screen and (min-width:650px) and (max-width:1079px) {
 
     .header--fixed {    /* Header */
         position: fixed;
@@ -81,7 +81,7 @@
         }   /* Fin section étapes fonctionnment */
 
         &.rest {    /* Section restaurants */
-            padding: 10% 15%;
+            align-items: center;
 
             h2 {
                 text-align: center;
@@ -91,6 +91,7 @@
             }
             
             ul {
+                width: 60%;
                 row-gap: 28px;
                 li {        /* Carte restaurant */
                     height: 175px;
