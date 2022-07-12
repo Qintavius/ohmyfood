@@ -282,47 +282,43 @@ footer li a {
 .loading {
   display: flex;
   position: fixed;
-  width: 100%;
-  height: 100%;
-  transform: scale(1);
-  background-color: #9356DC;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
   z-index: 100;
-  animation: loading-header 2.5s forwards;
-  animation-delay: 1.5s;
+  animation: loading-shutdown 1.8s forwards;
+  animation-delay: 1.3s;
 }
 .loading .span-container {
   display: flex;
   position: relative;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
+  background-color: #9356DC;
+  animation-delay: 1s;
+  animation: loading-shutdown-span 1.8s forwards;
 }
 .loading .span-container .underline {
   display: flex;
-  position: relative;
-  width: 100%;
-  overflow-y: hidden;
-  text-align: center;
   justify-content: center;
+  align-items: center;
+  width: 100%;
   z-index: 200;
+  overflow: hidden;
 }
 .loading span {
   display: inline-block;
-  position: relative;
   transform: translateY(50px);
-  transition: all 0.2s;
-  animation: loading-letter 1.8s forwards;
+  animation: loading-letter 1.2s forwards;
 }
 .loading .circle {
   position: absolute;
-  height: 0;
-  width: 0;
   transform: translateY(-5px);
-  animation-delay: 2.5s;
-  animation: loading-circle 2.1s forwards;
+  background-color: #FF79DA;
+  animation: loading-circle 1.4s forwards;
 }
 
 header {
@@ -716,108 +712,87 @@ button.button--order {
 @keyframes loading-letter { /* Animation lettres */
   0% {
     transform: translateY(50px);
-    color: #9356DC;
   }
-  29% {
-    transform: translateY(-5px);
-    color: #9356DC;
-  }
-  30% {
+  25% {
     transform: translateY(0px);
-    color: white;
   }
-  35% {
-    transform: translateY(-5px);
-    color: white;
-  }
-  37% {
-    transform: translateY(-5px);
-    color: white;
+  27% {
+    transform: translateY(0px);
   }
   100% {
-    transform: translateY(-5px);
+    transform: translateY(0px);
     color: white;
   }
 }
 .loading { /* Animation lettres */ }
 .loading span:nth-child(1) {
-  animation-delay: 0.3s;
+  animation-delay: 0.1s;
+  color: #9356DC;
 }
 .loading span:nth-child(2) {
-  animation-delay: 0.9s;
+  animation-delay: 0.5s;
+  color: #99E2D0;
 }
 .loading span:nth-child(3) {
-  animation-delay: 1.5s;
+  animation-delay: 1s;
+  color: #FF79DA;
 }
 
-@keyframes loading-circle { /* Aniation cercle */
+@keyframes loading-circle { /* Animation cercle */
   0% {
     height: 60px;
     width: 60px;
     background-color: #99E2D0;
   }
-  29% {
+  25% {
     height: 120px;
     width: 100%;
-    border-radius: 0;
     background-color: #99E2D0;
   }
-  30% {
+  27% {
     height: 120px;
     width: 100%;
-    border-radius: 0;
-    background-color: #99E2D0;
-  }
-  35% {
-    height: 120px;
-    width: 100%;
-    border-radius: 0;
-    background-color: #99E2D0;
-  }
-  37% {
-    height: 120px;
-    width: 100%;
-    border-radius: 0;
     background-color: #FF79DA;
   }
   90% {
     height: 100%;
     width: 100%;
-    border-radius: 0;
-    transform: translateY(0);
     background-color: #FF79DA;
   }
   100% {
-    height: 10px;
-    width: 10px;
-    border-radius: 10px;
-    transform: translateY(0);
-    background-color: #FF79DA;
+    height: 100%;
+    width: 0%;
+    background-color: #9356DC;
   }
 }
-@keyframes loading-header {
+@keyframes loading-shutdown-span {
   0% {
     opacity: 1;
   }
-  29% {
+  90% {
     opacity: 1;
-  }
-  30% {
-    opacity: 1;
-  }
-  35% {
-    opacity: 1;
-  }
-  37% {
-    opacity: 1;
-  }
-  40% {
-    height: 0;
-    transform: scale(0);
+    height: 100%;
   }
   100% {
-    transform: scale(0);
     opacity: 0;
+    height: 0;
+    z-index: -10;
+  }
+}
+@keyframes loading-shutdown {
+  0% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+    height: 100%;
+  }
+  90% {
+    opacity: 1;
+    height: 0;
+  }
+  100% {
+    height: 0;
     z-index: -10;
   }
 }
