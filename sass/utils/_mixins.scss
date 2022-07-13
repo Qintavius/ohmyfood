@@ -1,0 +1,418 @@
+@mixin tablet {
+    @media screen and (min-width: map-get($breakpoints, tablet-min)) and (max-width: map-get($breakpoints, tablet-max)) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: map-get($breakpoints, desktop-min)) {
+        @content;
+    }
+}
+
+.header {
+    @include desktop {
+        justify-content: flex-start;
+
+        img {
+            margin-left: 60px;
+        }
+    }
+}
+
+.header--fixed {
+    @include tablet {
+        position: fixed;
+        background-color: white;
+        box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+
+        .order--wide {      /* bouton commander ver. tablette apparent */
+            display: block;
+            position: inherit;
+            right: 29px;
+            button {    /* modif taille bouton */
+                height: 45px;
+                width: 130px;
+            }
+        }
+    }
+
+    @include desktop {
+        position: fixed;
+        justify-content: flex-start;
+        background-color: white;
+        box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+
+        img {
+            margin-left: 60px;
+        }
+
+        .order--wide {      /* bouton commander ver. tablette apparent */
+            display: block;
+            position: inherit;
+            right: 29px;
+            button {    /* modif taille bouton */
+                height: 45px;
+                width: 180px;
+            }
+        }
+    }
+}
+
+section {
+    @include tablet{
+        &.location--mobile {    /* Localisation */
+            display: none;
+        }
+
+        &.location--wide {
+            display: flex;
+            margin-bottom: 27px;
+            background-color: white;
+            box-shadow: none;
+        }
+        &.explore {      /* Container explore accueil */
+            padding: 10%;
+        }
+
+        &.step {    /* section étapes fonctionnement*/
+            position: relative;
+            margin: 10% 5% 5% 5%;
+            padding: 8% 0;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+
+            h2 {    /* Titre fonctionnement */
+                position: absolute;
+                top: 0;
+                margin: 0;
+                font-size: 24px;
+            }
+
+            .step-card {    /* cartes étapes */
+                flex-direction: column;
+                justify-content: center;
+                width: 198px;
+                height: 139px;
+                padding: 0 0;
+                margin: 0 0 0 0;
+                background-color: transparent;
+                box-shadow: none;
+
+                .circle-num {
+                    left: 50%;
+                    top: 33%;
+                    width: 33px;
+                    height: 33px;
+                    line-height: 33px;
+                    border: 2px solid white;
+                }
+
+                i {
+                    width: 59px;
+                    font-size: 59px;
+                }
+
+                p {
+                    margin: 12% 0;
+                }
+            }   /* Fin cartes étape fonctionnement */
+        }   /* Fin section étapes fonctionnment */
+
+        &.rest {    /* Section restaurants */
+            align-items: center;
+            padding-bottom: 10%;
+
+            h2 {
+                text-align: center;
+                margin: 0 0 40px 0;
+                font-size: 24px;
+            }
+            
+            ul {
+                width: 60%;
+                row-gap: 28px;
+                li {        /* Carte restaurant */
+                    height: 175px;
+                }
+            }
+
+            .rest-card {    /* zone cliquable cartes restaurants */
+            
+                figure {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+            
+                    figcaption {
+                        position: absolute;
+                        width: 55%;
+                        height: 100%;
+                        padding: 31px 0 31px 27px;
+            
+                        :nth-child(1) {     /* Nom restaurant */
+                            margin-bottom: 15px;
+                        }
+                        .icon_fav {     /* Zone de clique icone favoris */
+                            align-items: flex-end;
+                            padding-bottom: 13px;
+                        }
+                    }
+                    
+                    img {
+                        position: absolute;
+                        width: 45%;
+                        left: 0;
+                    }
+                }
+            }   /* Fin cartes restaurants */
+        }   /* Fin section restaurants */
+
+        /* Pages menu */
+
+        &.menu {    /* Section menu */
+            padding: 10% 25%;
+            border-radius: 0;
+            margin: 0;
+
+            .order--mobile {    /* bouton commander ver. mobile retiré */
+                display: none;
+            }
+
+            .dish-card {    /* carte menu */
+
+                &:hover h4 {
+                    width: 75%;
+                }
+            
+                &:hover .dish-card-subtxt {
+                    width: 85%;
+                }
+            }
+        }   /* Fin menu */
+    }   /* fin media querys */
+} /* Fin sections */
+
+section {       /* Sections */
+    @include desktop {
+            /* Page accueil */
+
+    &.location--mobile {    /* Localisation */
+        display: none;
+    }
+
+    &.location--wide {
+        display: flex;
+        position: relative;
+        margin-bottom: 34px;
+        background-color: white;
+        border-radius: 7px;
+        box-shadow: none;
+
+        i {
+            position: absolute;
+            left: 0.75%;
+            padding: 10px 14px;
+            font-size: 20px;
+            border-radius: 6px;
+            background-color: $color-light-gray;
+        }
+
+        form {
+            font-size: 20px;
+        }
+    }   /* Fin Localisation */
+
+    &.explore {      /* Container explore accueil */
+        padding: 8% 5% 5% 5%;
+
+        h2 {
+            font-size: 32px;
+        }
+        p {
+            font-size: 24px;
+        }
+    }
+
+    &.step {    /* section étapes fonctionnement*/
+        position: relative;
+        margin: 80px 0 0 0;
+        padding: 10px 0 0 0;
+        height: 299px;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+
+        h2 {    /* Titre fonctionnement */
+            position: absolute;
+            top: 0;
+            font-size: 30px;
+        }
+
+        .step-card {    /* cartes étapes */
+            flex-direction: column;
+            width: 198px;
+            height: 139px;
+            padding: 0 0;
+            margin: 0 0 0 0;
+            background-color: transparent;
+            box-shadow: none;
+
+            .circle-num {
+                left: 50%;
+                top: 20%;
+                width: 33px;
+                height: 33px;
+                line-height: 33px;
+                border: 2px solid white;
+            }
+
+            i {
+                width: 59px;
+                font-size: 59px;
+            }
+
+            p {
+                margin-left: 0;
+                margin-top: 12%;
+            }
+        }   /* Fin cartes étape fonctionnement */
+    }   /* Fin section étapes fonctionnment */
+
+    &.rest {    /* Section restaurants */
+        align-items: center;
+        padding-bottom: 10%;
+
+        h2 {
+            text-align: center;
+            margin: 20px 0 60px 0;
+            font-size: 30px;
+
+        }
+        
+        ul {
+            width: 60%;
+            row-gap: 38px;
+            li {        /* Carte restaurant */
+                height: 195px;
+            }
+        }
+    }   /* Fin section restaurants */
+
+    .rest-card {    /* zone cliquable cartes restaurants */
+        
+        figure {
+            display: flex;
+            flex-direction: row-reverse;
+            position: relative;
+            width: 100%;
+            height: 100%;
+    
+            figcaption {
+                position: absolute;
+                width: 55%;
+                height: 100%;
+                padding: 31px 0 31px 27px;
+
+                p {
+                    font-size: 22px;
+                }
+    
+                :nth-child(1) {     /* Nom restaurant */
+                    margin-bottom: 15px;
+                }
+                .icon_fav {     /* Zone de clique icone favoris */
+                    align-items: flex-end;
+                    padding-bottom: 13px;
+                }
+            }
+            
+            img {
+                position: absolute;
+                width: 45%;
+                left: 0;
+            }
+        }
+    }   /* Fin cartes restaurants */
+
+
+/*-------------- Pages menu ---------------*/
+    
+    &.menu {    /* Section menu */
+        padding: 6% 25%;
+        border-radius: 0;
+        margin: 0;
+
+        h2 {
+            font-size: 36px;
+        }
+
+        .order--mobile {    /* bouton commander ver. mobile retiré */
+            display: none;
+        }
+
+        .dish {
+            margin: 26px 0 26px 0;
+            
+            .dish-title {
+                font-size: 22px;
+            }
+        }
+
+        .dish-card {    /* carte menu */
+            height: 96px;
+
+            h4 {
+                font-size: 22px;
+            }
+
+            .dish-card-txt {
+                gap: 10%;
+            }
+
+            .dish-subtxt {
+                font-size: 20px;
+            }
+
+            .dish-price {
+                font-size: 20px;
+            }
+
+            .dish-check {
+                font-size: 30px;
+                width: 91px;
+            }
+        }
+    }   /* Fin menu */
+    }
+}   /* Fin sections */
+
+.main--menu {
+    .menu-top-img {
+        @include desktop {
+            position: relative;
+            height: 350px;
+        }
+    }
+}
+
+.icon_fav {
+    @include desktop {
+        &--top {
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            top: 50%;
+            right: 9%;
+            padding: 4px 0 0 0;
+            border-radius: 30px;
+            background-color: white;
+        }
+        &--menu {
+            display: none;
+        }
+    }
+}
