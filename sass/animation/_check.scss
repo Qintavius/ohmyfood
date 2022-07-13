@@ -1,4 +1,7 @@
-.dish-check {
+/* Animation de l'icône 
+de validation du produit sur carte menu*/
+
+.dish-check {   /* Container icône */
     display: flex;
     position: absolute;
     align-items: center;
@@ -13,23 +16,23 @@
     background-color: $color-tertiary;
     transition: all 0.3s ease;
 
-    .fa-circle-check {
+    .fa-circle-check {      /* icône */
         transform: rotate(360deg);
         transition: 0.4s ease;
     }
 }
 
-.dish-card {
+.dish-card {    /* Container carte menu */
 
     &:hover .dish-check {
         transform: translateX(0%);
 
-        .fa-circle-check {
+        .fa-circle-check {  /* Rotation icône */
             transform: rotate(0deg);
         }
     }
 
-    &:hover h4 {
+    &:hover h4 {    /*  */
         width: 72%;
         padding-right: 10px;
     }

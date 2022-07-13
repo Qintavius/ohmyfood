@@ -10,6 +10,7 @@
     cursor: pointer;
 
     &--menu {   /* Règle spécifique pages menu */
+        display: block;
         position: absolute;
         width: 48px;
     }

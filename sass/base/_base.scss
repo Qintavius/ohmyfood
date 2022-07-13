@@ -37,3 +37,12 @@ $color-backgrnd-footer: #353535;
 
 /* Couleurs fonts */
 $color-font-gray: #696969;
+
+/* media querys */
+$breakpoints: (
+    tablet-min: 650px,
+    tablet-max: 1023px,
+    desktop-min: 1024px,
+    desktop-max: 1340px,
+    desktop-wider: 1341px
+);

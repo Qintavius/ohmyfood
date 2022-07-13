@@ -11,14 +11,13 @@ section {   /* Règle commune */
     align-items: center;
     background-color: $color-dark-gray;
     box-shadow: inset 0px 6px 3px -3px rgba(0, 0, 0, 0.11);
+    &--wide {
+        display: none;
+    }
 
     i {
         margin-right: 17px;
     }
-}
-
-.location--wide {
-    display: none;
 }
 
 .explore {      /* Container explore accueil */
@@ -80,9 +79,8 @@ section {   /* Règle commune */
     }
 }
 
-.main-menu {    /* Container principal page menu */
+.main--menu {    /* Container principal page menu */
     width: 100%;
-    height: auto;
 
     .menu-top-img {    /* Container image sous le header page menu */
         height: 267px;
