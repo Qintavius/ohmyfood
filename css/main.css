@@ -31,6 +31,7 @@ header, main, footer {
 }
 
 /* Couleurs fonts */
+/* Couleur fond carte */
 /* media querys */
 /* Importation des fonts */
 /* Variables fonts */
@@ -280,6 +281,7 @@ section { /* Règle commune */
   row-gap: 18px;
 }
 .rest ul li {
+  position: relative;
   height: 251px;
   border-radius: 14px;
   overflow: hidden;
@@ -423,6 +425,21 @@ button.button--order {
 }
 
 .rest-card { /* Cartes restaurants */ }
+.rest-card--new { /* Encard "Nouveau" */ }
+.rest-card--new::after {
+  content: "Nouveau";
+  position: absolute;
+  width: 80px;
+  border-radius: 2px;
+  top: 12px;
+  right: 12px;
+  padding: 7px 0 7px 0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #139273;
+  background-color: #99E2D0;
+}
 .rest-card figure {
   width: 100%;
   height: 174px;
@@ -796,6 +813,13 @@ section {
     height: 175px;
   }
   section.rest .rest-card { /* zone cliquable cartes restaurants */ }
+  section.rest .rest-card--new::after {
+    top: unset;
+    right: unset;
+    left: 49.5%;
+    bottom: 12%;
+    padding: 7px 0 7px 0;
+  }
   section.rest .rest-card figure {
     display: flex;
     flex-direction: row-reverse;
@@ -938,6 +962,13 @@ section { /* Sections */ }
     height: 195px;
   }
   section .rest-card { /* zone cliquable cartes restaurants */ }
+  section .rest-card--new::after {
+    top: unset;
+    right: unset;
+    left: 49%;
+    bottom: 12%;
+    padding: 7px 0 7px 0;
+  }
   section .rest-card figure {
     display: flex;
     flex-direction: row-reverse;
