@@ -139,7 +139,15 @@ section {
             }
 
             .rest-card {    /* zone cliquable cartes restaurants */
-            
+                &--new {
+                    &::after {
+                        top: unset;
+                        right: unset;
+                        left: 49.5%;
+                        bottom: 12%;
+                        padding: 7px 0 7px 0;
+                    }
+                }
                 figure {
                     display: flex;
                     flex-direction: row-reverse;
@@ -303,6 +311,15 @@ section {       /* Sections */
     }   /* Fin section restaurants */
 
     .rest-card {    /* zone cliquable cartes restaurants */
+        &--new {
+            &::after {
+                top: unset;
+                right: unset;
+                left: 49%;
+                bottom: 12%;
+                padding: 7px 0 7px 0;
+            }
+        }
         
         figure {
             display: flex;

@@ -66,6 +66,7 @@ section {   /* Règle commune */
         row-gap: 18px;
 
         li {
+            position: relative;
             height: 251px;
             border-radius: 14px;
             overflow: hidden;
