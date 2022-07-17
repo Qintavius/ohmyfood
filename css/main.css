@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* Règles communes */
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 * {
@@ -21,22 +22,15 @@ header, main, footer {
 /* Charte couleur */
 /* Couleurs fond de sections */
 /* Box shadow boutons, onglets et cartes */
-:root {
-  --btn-shadow-dft: 0px 4px 8px rgba(0, 0, 0, 0.25);
-  --btn-shadow-hover: 0px 4px 8px rgba(0, 0, 0, 0.4);
-  --tab-shadow-dft: 0px 6px 10px rgba(0, 0, 0, 0.1);
-  --tab-shadow-hover: 0px 6px 10px rgba(0, 0, 0, 0.15);
-  --card-shadow-dft: 0px 3px 8px rgba(0, 0, 0, 0.04);
-  --card-shadow-hover: 0px 2px 14px rgba(0, 0, 0, 0.2);
-}
-
 /* Couleurs fonts */
 /* Couleur fond carte */
+/* Transition pages responsive */
 /* media querys */
 /* Importation des fonts */
 /* Variables fonts */
 /* Page d'accueil */
-.main--home { /* Container main page Accueil */
+/* Container main page Accueil */
+.main--home {
   font-family: "Roboto", sans-serif;
 }
 .main--home p {
@@ -45,29 +39,32 @@ header, main, footer {
   word-spacing: -0.05em;
 }
 
-h2 { /* Titre des containers */
+/* Titre des containers */
+h2 {
   font-size: 24px;
   font-weight: 700;
+  /* Règle pour pages menu */
 }
-h2.rest-title { /* Règle pour pages menu */
+h2.rest-title {
   font-family: "Shrikhand", cursive;
   font-size: 28px;
   font-weight: normal;
 }
 
-button { /* boutons explore et order */
+/* boutons explore et order */
+button {
   font-size: 16px;
   font-weight: 500;
   color: white;
   letter-spacing: 0.005em;
 }
 
-.location { /* Container location accueil */ }
+/* Container location accueil */
 .location form {
   letter-spacing: 0.01em;
 }
 
-.step { /* step container */ }
+/* step container */
 .step .circle-num {
   font-size: 14px;
   color: white;
@@ -77,8 +74,9 @@ button { /* boutons explore et order */
   font-weight: 600;
 }
 
-figcaption { /* Contient l'image de carte page accueil */ }
-figcaption p:nth-child(1) { /* Nom du restaurant */
+/* Contient l'image de carte page accueil */
+figcaption p:nth-child(1) {
+  /* Nom du restaurant */
   font-size: 18px;
   font-weight: 700;
   margin-right: 77px;
@@ -88,7 +86,8 @@ figcaption p:nth-child(1) { /* Nom du restaurant */
   white-space: nowrap;
   overflow: hidden;
 }
-figcaption p { /* Emplacement restaurant page accueil */
+figcaption p {
+  /* Emplacement restaurant page accueil */
   font-size: 18px;
   font-weight: 400;
   margin-right: 77px;
@@ -127,7 +126,7 @@ figcaption p { /* Emplacement restaurant page accueil */
 footer {
   color: white;
 }
-footer h4 {
+footer p {
   font-size: 18px;
   font-family: "Shrikhand", cursive;
   font-weight: 400;
@@ -147,6 +146,8 @@ footer li a {
   font-size: 34px;
 }
 
+/* Mise en page */
+/* Page de loading */
 .loading {
   display: flex;
   position: fixed;
@@ -196,8 +197,11 @@ header {
   height: 63px;
   justify-content: center;
   align-items: center;
+  /* Zone de clique étendu pour icone flèche retour */
+  /* icone flèche retour */
+  /* logo ohmyfood */
 }
-header a { /* Zone de clique étendu pour icone flèche retour */
+header a {
   display: flex;
   position: absolute;
   justify-content: center;
@@ -208,26 +212,30 @@ header a { /* Zone de clique étendu pour icone flèche retour */
   text-decoration: none;
   color: black;
 }
-header i { /* icone flèche retour */
+header i {
   font-size: 21px;
   padding: 26px 0 21px 0;
 }
-header img { /* logo ohmyfood */
+header img {
   height: 100%;
   width: 162px;
   padding: 8px 0 0 0;
   object-fit: contain;
 }
 
-section { /* Règle commune */
+/* Règle commune */
+section {
   display: flex;
+  transition: all 0.5s ease-in-out;
 }
 
-.location, .explore { /* règle container location + explore */
+/* règle container location + explore */
+.location, .explore {
   justify-content: center;
 }
 
-.location { /* Container location accueil */
+/* Container location accueil */
+.location {
   height: 50px;
   align-items: center;
   background-color: #EAEAEA;
@@ -239,16 +247,21 @@ section { /* Règle commune */
 .location i {
   margin-right: 17px;
 }
+.location #location {
+  display: none;
+}
 
-.explore { /* Container explore accueil */
+/* Container explore accueil */
+.explore {
   flex-direction: column;
   height: auto;
   align-items: center;
   text-align: center;
   background-color: #F6F6F6;
   padding: 10% 5% 15% 5%;
+  /* Contenu about du container explore */
 }
-.explore .about { /* Contenu about du container explore */
+.explore .about {
   height: 100%;
 }
 .explore .about h2 {
@@ -258,7 +271,8 @@ section { /* Règle commune */
   margin: 12px 0 30px 0;
 }
 
-.step { /* Container Fonctionnement */
+/* Container Fonctionnement */
+.step {
   flex-direction: column;
   padding: 36px 19px 42px 19px;
 }
@@ -266,7 +280,8 @@ section { /* Règle commune */
   margin: 12px 0 30px 0;
 }
 
-.rest { /* Container Restaurants */
+/* Container Restaurants */
+.rest {
   flex-direction: column;
   padding: 54px 19px 62px 19px;
   background-color: #F6F6F6;
@@ -284,26 +299,31 @@ section { /* Règle commune */
   position: relative;
   height: 251px;
   border-radius: 14px;
+  padding-bottom: 77px;
   overflow: hidden;
-  box-shadow: var(--card-shadow-dft);
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.04);
   transition: 0.3s ease;
 }
 .rest ul li:hover {
-  box-shadow: var(--card-shadow-hover);
+  box-shadow: 3px 2px 12px rgba(0, 0, 0, 0.125);
 }
 
-.main--menu { /* Container principal page menu */
+/* Container principal page menu */
+.main--menu {
   width: 100%;
+  /* Container image sous le header page menu */
 }
-.main--menu .menu-top-img { /* Container image sous le header page menu */
+.main--menu .menu-top-img {
   height: 267px;
 }
 .main--menu .menu-top-img img {
   width: 100%;
   object-fit: cover;
+  transition: all 0.5s ease-in-out;
 }
 
-.menu { /* Container menu */
+/* Container menu */
+.menu {
   flex-direction: column;
   position: relative;
   margin-top: -51px;
@@ -327,7 +347,8 @@ section { /* Règle commune */
   padding: 36px 0 48px 0;
 }
 
-.dish { /* Container type de plats */
+/* Container type de plats */
+.dish {
   flex-direction: column;
   width: 100%;
   height: auto;
@@ -340,6 +361,7 @@ section { /* Règle commune */
   padding: 0 6px;
 }
 .dish .dish-title::before {
+  /* Ligne sous titre */
   content: "";
   position: absolute;
   width: 40px;
@@ -354,7 +376,7 @@ footer {
   padding: 24px 0 27px 25px;
   background-color: #353535;
 }
-footer h4 {
+footer p {
   margin-bottom: 13px;
 }
 footer i {
@@ -362,7 +384,9 @@ footer i {
   margin-right: 10px;
 }
 
-button { /* Style commun aux boutons */
+/* Composants */
+/* Style commun aux boutons */
+button {
   background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
   height: 50px;
   width: 218px;
@@ -371,8 +395,9 @@ button { /* Style commun aux boutons */
   border: none;
   transition: linear 0.3s;
   cursor: pointer;
+  /* Effet de survol boutons */
 }
-button:hover { /* Effet de survol boutons */
+button:hover {
   opacity: 0.9;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 }
@@ -385,7 +410,8 @@ button.button--order {
 }
 
 /* Carte page accueil */
-.step-card { /* Carte step */
+/* Carte step */
+.step-card {
   display: flex;
   position: relative;
   height: 73px;
@@ -394,11 +420,11 @@ button.button--order {
   margin: 0 0 24px 12px;
   border-radius: 19px;
   background-color: #F6F6F6;
-  box-shadow: var(--tab-shadow-dft);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
   transition: 0.3s ease;
 }
 .step-card:hover {
-  box-shadow: var(--tab-shadow-hover);
+  box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.15);
   background-color: rgba(147, 86, 220, 0.11);
 }
 .step-card:hover > i {
@@ -424,9 +450,9 @@ button.button--order {
   margin-left: 28px;
 }
 
-.rest-card { /* Cartes restaurants */ }
-.rest-card--new { /* Encard "Nouveau" */ }
+/* Cartes restaurants */
 .rest-card--new::after {
+  /* Encard "Nouveau" */
   content: "Nouveau";
   position: absolute;
   width: 80px;
@@ -442,21 +468,36 @@ button.button--order {
 }
 .rest-card figure {
   width: 100%;
-  height: 174px;
+  height: 100%;
 }
 .rest-card figure img {
   object-fit: cover;
   width: 100%;
   height: 100%;
-  vertical-align: bottom; /* Enlève  l'espace entre figure et figcaption */
+  /* Enlève  l'espace entre figure et figcaption */
+  vertical-align: bottom;
 }
-.rest-card figure figcaption {
-  position: relative;
-  height: 77px;
+.rest-card figure .figcaption {
   background-color: white;
   padding: 15px 0 16px 12px;
 }
-.rest-card figure figcaption :nth-child(1) {
+.rest-card figure .figcaption--new::after {
+  /* Encard "Nouveau" ver. tablet / desktop */
+  content: "Nouveau";
+  display: none;
+  position: absolute;
+  width: 80px;
+  border-radius: 2px;
+  bottom: 24px;
+  left: 27px;
+  padding: 7px 0 7px 0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #139273;
+  background-color: #99E2D0;
+}
+.rest-card figure .figcaption :nth-child(1) {
   margin-bottom: 4px;
 }
 
@@ -469,12 +510,15 @@ button.button--order {
   margin: 14px 0;
   border-radius: 15px;
   background-color: white;
-  box-shadow: var(--card-shadow-dft);
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.04);
   overflow: hidden;
   transition: 0.3s ease;
+  cursor: pointer;
+  animation: element-load-left 0.8s forwards;
+  opacity: 0;
 }
 .dish-card:hover {
-  box-shadow: var(--card-shadow-hover);
+  box-shadow: 3px 2px 12px rgba(0, 0, 0, 0.125);
 }
 .dish-card .dish-card-txt {
   display: flex;
@@ -511,32 +555,37 @@ button.button--order {
   padding-left: 10px;
 }
 
-.icon_fav { /* Zone de clique étendu pour icone favoris */
+/* Zone de clique étendu pour icone favoris */
+.icon_fav {
   display: flex;
   position: absolute;
   width: 77px;
-  height: 100%;
+  height: 77px;
   right: 0;
-  top: 0;
+  bottom: 0;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  /* Règle spécifique pages menu */
+  /* Animation icone au survol de la zone de clique étendu */
 }
-.icon_fav--menu { /* Règle spécifique pages menu */
-  display: block;
-  position: absolute;
-  width: 48px;
+.icon_fav--menu {
+  width: 70px;
+  height: auto;
+  top: 0;
 }
-.icon_fav:hover .fa-heart { /* Animation icone au survol de la zone de clique étendu */
+.icon_fav:hover .fa-heart {
   -webkit-text-stroke: 1.5px transparent;
+  /* Replicat visible au survol */
 }
-.icon_fav:hover .fa-heart::after { /* Replicat visible au survol */
+.icon_fav:hover .fa-heart::after {
   opacity: 1;
   font-size: 23px;
   padding: 2px;
 }
 
-.fa-heart { /* Icone favoris */
+/* Icone favoris */
+.fa-heart {
   position: relative;
   font-size: 23px;
   background: transparent;
@@ -544,11 +593,13 @@ button.button--order {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1.5px black;
   transition: 0.5s linear;
+  /* Replicat icone favoris en transparence */
 }
-.fa-heart::after { /* Replicat icone favoris en transparence */
+.fa-heart::after {
   content: "\f004";
   font-size: 0px;
-  padding: 13px; /* fait apparaitre l'icone au centre */
+  /* fait apparaitre l'icone au centre */
+  padding: 13px;
   position: absolute;
   top: -2px;
   left: -2px;
@@ -560,9 +611,11 @@ button.button--order {
   transition: 0.3s linear;
 }
 
+/* Animations */
 /* Animation de l'icône 
 de validation du produit sur carte menu*/
-.dish-check { /* Container icône */
+/* Container icône */
+.dish-check {
   display: flex;
   position: absolute;
   align-items: center;
@@ -576,20 +629,22 @@ de validation du produit sur carte menu*/
   transform: translateX(104%);
   background-color: #99E2D0;
   transition: all 0.3s ease;
+  /* icône */
 }
-.dish-check .fa-circle-check { /* icône */
+.dish-check .fa-circle-check {
   transform: rotate(360deg);
   transition: 0.4s ease;
 }
 
-.dish-card { /* Container carte menu */ }
+/* Container carte menu */
 .dish-card:hover .dish-check {
   transform: translateX(0%);
+  /* Rotation icône */
 }
-.dish-card:hover .dish-check .fa-circle-check { /* Rotation icône */
+.dish-card:hover .dish-check .fa-circle-check {
   transform: rotate(0deg);
 }
-.dish-card:hover h4 { /*  */
+.dish-card:hover h4 {
   width: 72%;
   padding-right: 10px;
 }
@@ -598,7 +653,8 @@ de validation du produit sur carte menu*/
 }
 
 /* Animation loading page */
-@keyframes loading-letter { /* Animation lettres */
+/* Animation lettres */
+@keyframes loading-letter {
   0% {
     transform: translateY(50px);
   }
@@ -613,7 +669,7 @@ de validation du produit sur carte menu*/
     color: white;
   }
 }
-.loading { /* Animation lettres */ }
+/* Animation lettres */
 .loading span:nth-child(1) {
   animation-delay: 0.1s;
   color: #9356DC;
@@ -627,7 +683,8 @@ de validation du produit sur carte menu*/
   color: #FF79DA;
 }
 
-@keyframes loading-circle { /* Animation cercle */
+/* Animation cercle */
+@keyframes loading-circle {
   0% {
     height: 60px;
     width: 60px;
@@ -687,9 +744,39 @@ de validation du produit sur carte menu*/
 }
 /* Fin animation loading page */
 /* Animation oredre apparition cartes */
+/* Animation chargement des éléments carte menu */
+@keyframes element-load-left {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.dish-card:nth-of-type(1) {
+  animation-delay: 0.1s;
+}
+.dish-card:nth-of-type(2) {
+  animation-delay: 0.3s;
+}
+.dish-card:nth-of-type(3) {
+  animation-delay: 0.5s;
+}
+.dish-card:nth-of-type(4) {
+  animation-delay: 0.7s;
+}
+
+/* Responsive */
+/* Media querys tablette */
+/* Media querys desktop */
 @media screen and (min-width: 1024px) {
   .header {
     justify-content: flex-start;
+    transition: all 0.5s ease-in-out;
   }
   .header img {
     margin-left: 60px;
@@ -701,13 +788,16 @@ de validation du produit sur carte menu*/
     position: fixed;
     background-color: white;
     box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease-in-out;
+    /* bouton commander ver. tablette apparent */
   }
-  .header--fixed .order--wide { /* bouton commander ver. tablette apparent */
+  .header--fixed .order--wide {
     display: block;
     position: inherit;
     right: 29px;
+    /* modif taille bouton */
   }
-  .header--fixed .order--wide button { /* modif taille bouton */
+  .header--fixed .order--wide button {
     height: 45px;
     width: 130px;
   }
@@ -718,59 +808,61 @@ de validation du produit sur carte menu*/
     justify-content: flex-start;
     background-color: white;
     box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease-in-out;
+    /* bouton commander ver. tablette apparent */
   }
   .header--fixed img {
     margin-left: 60px;
   }
-  .header--fixed .order--wide { /* bouton commander ver. tablette apparent */
+  .header--fixed .order--wide {
     display: block;
     position: inherit;
     right: 29px;
+    /* modif taille bouton */
   }
-  .header--fixed .order--wide button { /* modif taille bouton */
+  .header--fixed .order--wide button {
     height: 45px;
     width: 180px;
   }
 }
 
-section {
-  /* fin media querys */
-}
 @media screen and (min-width: 650px) and (max-width: 1023px) {
   section {
-    /* Fin section étapes fonctionnment */
-    /* Fin section restaurants */
-    /* Pages menu */
-    /* Fin menu */
+    transition: all 0.5s ease-in-out;
   }
-  section.location--mobile { /* Localisation */
+  section.location--mobile {
+    /* Localisation */
     display: none;
   }
   section.location--wide {
     display: flex;
     margin-bottom: 27px;
     background-color: white;
+    border-radius: 6px;
     box-shadow: none;
   }
-  section.explore { /* Container explore accueil */
+  section.explore {
+    /* Container explore accueil */
     padding: 10%;
   }
-  section.step { /* section étapes fonctionnement*/
+  section.step {
+    /* section étapes fonctionnement*/
     position: relative;
     margin: 10% 5% 5% 5%;
     padding: 8% 0;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    /* Fin cartes étape fonctionnement */
   }
-  section.step h2 { /* Titre fonctionnement */
+  section.step h2 {
+    /* Titre fonctionnement */
     position: absolute;
     top: 0;
     margin: 0;
     font-size: 24px;
   }
-  section.step .step-card { /* cartes étapes */
+  section.step .step-card {
+    /* cartes étapes */
     flex-direction: column;
     justify-content: center;
     width: 198px;
@@ -795,10 +887,10 @@ section {
   section.step .step-card p {
     margin: 12% 0;
   }
-  section.rest { /* Section restaurants */
+  section.rest {
+    /* Section restaurants */
     align-items: center;
     padding-bottom: 10%;
-    /* Fin cartes restaurants */
   }
   section.rest h2 {
     text-align: center;
@@ -809,34 +901,36 @@ section {
     width: 60%;
     row-gap: 28px;
   }
-  section.rest ul li { /* Carte restaurant */
-    height: 175px;
-  }
-  section.rest .rest-card { /* zone cliquable cartes restaurants */ }
-  section.rest .rest-card--new::after {
-    top: unset;
-    right: unset;
-    left: 49.5%;
-    bottom: 12%;
-    padding: 7px 0 7px 0;
-  }
-  section.rest .rest-card figure {
-    display: flex;
-    flex-direction: row-reverse;
+  section.rest ul li {
+    /* Carte restaurant */
     position: relative;
     width: 100%;
+    padding-right: 60%;
+    height: 175px;
+  }
+  section.rest .rest-card--new::after {
+    display: none;
+  }
+  section.rest .rest-card figure {
     height: 100%;
   }
-  section.rest .rest-card figure figcaption {
+  section.rest .rest-card figure .figcaption {
     position: absolute;
     width: 55%;
     height: 100%;
+    top: 0;
+    right: 0;
     padding: 31px 0 31px 27px;
   }
-  section.rest .rest-card figure figcaption :nth-child(1) { /* Nom restaurant */
+  section.rest .rest-card figure .figcaption--new::after {
+    display: initial;
+  }
+  section.rest .rest-card figure .figcaption :nth-child(1) {
+    /* Nom restaurant */
     margin-bottom: 15px;
   }
-  section.rest .rest-card figure figcaption .icon_fav { /* Zone de clique icone favoris */
+  section.rest .rest-card figure .figcaption .icon_fav {
+    /* Zone de clique icone favoris */
     align-items: flex-end;
     padding-bottom: 13px;
   }
@@ -845,15 +939,16 @@ section {
     width: 45%;
     left: 0;
   }
-  section.menu { /* Section menu */
-    padding: 10% 25%;
+  section.menu {
+    /* Section menu */
+    padding: 10% 23%;
     border-radius: 0;
     margin: 0;
   }
-  section.menu .order--mobile { /* bouton commander ver. mobile retiré */
+  section.menu .order--mobile {
+    /* bouton commander ver. mobile retiré */
     display: none;
   }
-  section.menu .dish-card { /* carte menu */ }
   section.menu .dish-card:hover h4 {
     width: 75%;
   }
@@ -862,19 +957,12 @@ section {
   }
 }
 
-/* Fin sections */
-section { /* Sections */ }
 @media screen and (min-width: 1024px) {
   section {
-    /* Page accueil */
-    /* Fin Localisation */
-    /* Fin section étapes fonctionnment */
-    /* Fin section restaurants */
-    /* Fin cartes restaurants */
-    /*-------------- Pages menu ---------------*/
-    /* Fin menu */
+    transition: all 0.5s ease-in-out;
   }
-  section.location--mobile { /* Localisation */
+  section.location--mobile {
+    /* Localisation */
     display: none;
   }
   section.location--wide {
@@ -882,7 +970,7 @@ section { /* Sections */ }
     position: relative;
     margin-bottom: 34px;
     background-color: white;
-    border-radius: 7px;
+    border-radius: 6px;
     box-shadow: none;
   }
   section.location--wide i {
@@ -890,13 +978,14 @@ section { /* Sections */ }
     left: 0.75%;
     padding: 10px 14px;
     font-size: 20px;
-    border-radius: 6px;
+    border-radius: 4px;
     background-color: #F6F6F6;
   }
   section.location--wide form {
     font-size: 20px;
   }
-  section.explore { /* Container explore accueil */
+  section.explore {
+    /* Container explore accueil */
     padding: 8% 5% 5% 5%;
   }
   section.explore h2 {
@@ -905,7 +994,8 @@ section { /* Sections */ }
   section.explore p {
     font-size: 24px;
   }
-  section.step { /* section étapes fonctionnement*/
+  section.step {
+    /* section étapes fonctionnement*/
     position: relative;
     margin: 80px 0 0 0;
     padding: 10px 0 0 0;
@@ -913,14 +1003,15 @@ section { /* Sections */ }
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    /* Fin cartes étape fonctionnement */
   }
-  section.step h2 { /* Titre fonctionnement */
+  section.step h2 {
+    /* Titre fonctionnement */
     position: absolute;
     top: 0;
     font-size: 30px;
   }
-  section.step .step-card { /* cartes étapes */
+  section.step .step-card {
+    /* cartes étapes */
     flex-direction: column;
     width: 198px;
     height: 139px;
@@ -945,7 +1036,8 @@ section { /* Sections */ }
     margin-left: 0;
     margin-top: 12%;
   }
-  section.rest { /* Section restaurants */
+  section.rest {
+    /* Section restaurants */
     align-items: center;
     padding-bottom: 10%;
   }
@@ -958,46 +1050,50 @@ section { /* Sections */ }
     width: 60%;
     row-gap: 38px;
   }
-  section.rest ul li { /* Carte restaurant */
-    height: 195px;
-  }
-  section .rest-card { /* zone cliquable cartes restaurants */ }
-  section .rest-card--new::after {
-    top: unset;
-    right: unset;
-    left: 49%;
-    bottom: 12%;
-    padding: 7px 0 7px 0;
-  }
-  section .rest-card figure {
-    display: flex;
-    flex-direction: row-reverse;
+  section.rest ul li {
+    /* Carte restaurant */
     position: relative;
+    height: 195px;
     width: 100%;
+    padding-right: 60%;
+  }
+  section.rest .rest-card--new::after {
+    display: none;
+  }
+  section.rest .rest-card figure {
     height: 100%;
   }
-  section .rest-card figure figcaption {
+  section.rest .rest-card figure .figcaption {
     position: absolute;
-    width: 55%;
+    width: 60%;
     height: 100%;
+    top: 0;
+    right: 0;
     padding: 31px 0 31px 27px;
   }
-  section .rest-card figure figcaption p {
+  section.rest .rest-card figure .figcaption--new::after {
+    /* Encard "Nouveau" ver. tablet / desktop */
+    display: initial;
+  }
+  section.rest .rest-card figure .figcaption p {
     font-size: 22px;
   }
-  section .rest-card figure figcaption :nth-child(1) { /* Nom restaurant */
+  section.rest .rest-card figure .figcaption :nth-child(1) {
+    /* Nom restaurant */
     margin-bottom: 15px;
   }
-  section .rest-card figure figcaption .icon_fav { /* Zone de clique icone favoris */
+  section.rest .rest-card figure .figcaption .icon_fav {
+    /* Zone de clique icone favoris */
     align-items: flex-end;
     padding-bottom: 13px;
   }
-  section .rest-card figure img {
+  section.rest .rest-card figure img {
     position: absolute;
     width: 45%;
     left: 0;
   }
-  section.menu { /* Section menu */
+  section.menu {
+    /* Section menu */
     padding: 6% 25%;
     border-radius: 0;
     margin: 0;
@@ -1005,7 +1101,8 @@ section { /* Sections */ }
   section.menu h2 {
     font-size: 36px;
   }
-  section.menu .order--mobile { /* bouton commander ver. mobile retiré */
+  section.menu .order--mobile {
+    /* bouton commander ver. mobile retiré */
     display: none;
   }
   section.menu .dish {
@@ -1014,7 +1111,8 @@ section { /* Sections */ }
   section.menu .dish .dish-title {
     font-size: 22px;
   }
-  section.menu .dish-card { /* carte menu */
+  section.menu .dish-card {
+    /* carte menu */
     height: 96px;
   }
   section.menu .dish-card h4 {
@@ -1035,8 +1133,10 @@ section { /* Sections */ }
   }
 }
 
-/* Fin sections */
 @media screen and (min-width: 1024px) {
+  .main--menu {
+    transition: all 0.5s ease-in-out;
+  }
   .main--menu .menu-top-img {
     position: relative;
     height: 350px;
@@ -1044,6 +1144,9 @@ section { /* Sections */ }
 }
 
 @media screen and (min-width: 1024px) {
+  .icon_fav {
+    transition: all 0.5s ease-in-out;
+  }
   .icon_fav--top {
     position: absolute;
     height: 50px;
