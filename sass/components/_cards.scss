@@ -1,6 +1,7 @@
 /* Carte page accueil */
 
-.step-card {        /* Carte step */
+/* Carte step */
+.step-card {
     display: flex;
     position: relative;
     height: 73px;
@@ -9,10 +10,10 @@
     margin: 0 0 24px 12px;
     border-radius: 19px;
     background-color: $color-light-gray;
-    box-shadow: var(--tab-shadow-dft);
+    box-shadow: $tab-shadow-dft;
     transition: 0.3s ease;
     &:hover {
-        box-shadow: var(--tab-shadow-hover);
+        box-shadow: $tab-shadow-hover;
         background-color: rgba(147, 86, 220, 0.11);
 
         &>i {
@@ -43,9 +44,11 @@
     }
 }
 
-.rest-card {    /* Cartes restaurants */
-    &--new {    /* Encard "Nouveau" */
+/* Cartes restaurants */
+.rest-card {
+    &--new {
         &::after {
+/* Encard "Nouveau" */
             content: "Nouveau";
             position: absolute;
             width: 80px;
@@ -57,33 +60,50 @@
             font-size: 14px;
             font-weight: 500;
             color: $color-font-green;
-            background-color: $color-card-mint;
+            background-color: $color-new-mint;
         }
     }
 
 
     figure {
         width: 100%;
-        height: 174px;
+        height: 100%;
 
         img {
             object-fit: cover;
             width: 100%;
             height: 100%;
-            vertical-align: bottom; /* Enlève  l'espace entre figure et figcaption */
+            /* Enlève  l'espace entre figure et figcaption */
+            vertical-align: bottom;
         }
 
-        figcaption {
-            position: relative;
-            height: 77px;
+        .figcaption {
             background-color: white;
             padding: 15px 0 16px 12px;
+
+            &--new {
+                &::after {
+            /* Encard "Nouveau" ver. tablet / desktop */
+                    content: "Nouveau";
+                    display: none;
+                    position: absolute;
+                    width: 80px;
+                    border-radius: 2px;
+                    bottom: 24px;
+                    left: 27px;
+                    padding: 7px 0 7px 0;
+                    text-align: center;
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: $color-font-green;
+                    background-color: $color-new-mint;
+                }
+            }
 
             :nth-child(1) {
                 margin-bottom: 4px;
             }
         }
-
     }
 }
 
@@ -97,12 +117,15 @@
     margin: 14px 0;
     border-radius: 15px;
     background-color: white;
-    box-shadow: var(--card-shadow-dft);
+    box-shadow: $card-shadow-dft;
     overflow: hidden;
     transition: 0.3s ease;
+    cursor: pointer;
+    animation: element-load-left 0.8s forwards;
+    opacity: 0;
 
     &:hover {
-        box-shadow: var(--card-shadow-hover);
+        box-shadow: $card-shadow-hover;
     }
     
     .dish-card-txt {
