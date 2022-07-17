@@ -9,7 +9,8 @@ $font-txt: 'Roboto', sans-serif;
 
 /* Page d'accueil */
 
-.main--home {  /* Container main page Accueil */
+/* Container main page Accueil */
+.main--home {
     font-family: $font-txt;
         p {
             font-size: 18px;
@@ -18,31 +19,36 @@ $font-txt: 'Roboto', sans-serif;
         }
 }
 
-h2 {    /* Titre des containers */
+/* Titre des containers */
+h2 {
     font-size: 24px;
     font-weight: 700;
 
-    &.rest-title {      /* Règle pour pages menu */
+    /* Règle pour pages menu */
+    &.rest-title {
         font-family: $font-logo;
         font-size: 28px;
         font-weight: normal;
     }
 }
 
-button {    /* boutons explore et order */
+/* boutons explore et order */
+button {
     font-size: 16px;
     font-weight: 500;
     color: white;
     letter-spacing: 0.005em;
 }
 
-.location {     /* Container location accueil */
+/* Container location accueil */
+.location {
     form {
         letter-spacing: 0.01em;
     }
 }
 
-.step {     /* step container */
+/* step container */
+.step {
     .circle-num {   
         font-size: 14px;
         color: white;
@@ -54,8 +60,10 @@ button {    /* boutons explore et order */
     }
 }
 
-figcaption {    /* Contient l'image de carte page accueil */
-    p:nth-child(1) {    /* Nom du restaurant */
+/* Contient l'image de carte page accueil */
+figcaption {
+    p:nth-child(1) {
+    /* Nom du restaurant */
         font-size: 18px;
         font-weight: 700;
         margin-right: 77px;
@@ -66,7 +74,8 @@ figcaption {    /* Contient l'image de carte page accueil */
         overflow: hidden;
     }
 
-    p {     /* Emplacement restaurant page accueil */
+    p {
+    /* Emplacement restaurant page accueil */
         font-size: 18px;
         font-weight: 400;
         margin-right: 77px;
@@ -113,7 +122,7 @@ figcaption {    /* Contient l'image de carte page accueil */
 footer {
     color: white;
 
-    h4 {
+    p {
         font-size: 18px;
         font-family: $font-logo;
         font-weight: 400;
