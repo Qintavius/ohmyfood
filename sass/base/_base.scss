@@ -26,21 +26,22 @@ $color-light-gray: #F6F6F6;
 $color-backgrnd-footer: #353535;
 
 /* Box shadow boutons, onglets et cartes */
-:root {
-    --btn-shadow-dft: 0px 4px 8px rgba(0, 0, 0, 0.25);
-    --btn-shadow-hover: 0px 4px 8px rgba(0, 0, 0, 0.4);
-    --tab-shadow-dft: 0px 6px 10px rgba(0, 0, 0, 0.1);
-    --tab-shadow-hover: 0px 6px 10px rgba(0, 0, 0, 0.15);
-    --card-shadow-dft: 0px 3px 8px rgba(0, 0, 0, 0.04);
-    --card-shadow-hover: 0px 2px 14px rgba(0, 0, 0, 0.2);
-}
+$btn-shadow-dft: 0px 4px 8px rgba(0, 0, 0, 0.25);
+$btn-shadow-hover: 0px 4px 8px rgba(0, 0, 0, 0.4);
+$tab-shadow-dft: 0px 6px 10px rgba(0, 0, 0, 0.1);
+$tab-shadow-hover: 2px 6px 10px rgba(0, 0, 0, 0.15);
+$card-shadow-dft: 0px 3px 8px rgba(0, 0, 0, 0.04);
+$card-shadow-hover: 3px 2px 12px rgba(0, 0, 0, 0.125);
 
 /* Couleurs fonts */
 $color-font-gray: #696969;
 $color-font-green: #139273;
 
 /* Couleur fond carte */
-$color-card-mint: #99E2D0;
+$color-new-mint: #99E2D0;
+
+/* Transition pages responsive */
+$transition-media: all 0.5s ease-in-out;
 
 /* media querys */
 $breakpoints: (
