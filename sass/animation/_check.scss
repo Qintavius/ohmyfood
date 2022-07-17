@@ -1,7 +1,8 @@
 /* Animation de l'icône 
 de validation du produit sur carte menu*/
 
-.dish-check {   /* Container icône */
+/* Container icône */
+.dish-check {
     display: flex;
     position: absolute;
     align-items: center;
@@ -16,23 +17,26 @@ de validation du produit sur carte menu*/
     background-color: $color-tertiary;
     transition: all 0.3s ease;
 
-    .fa-circle-check {      /* icône */
+    /* icône */
+    .fa-circle-check {
         transform: rotate(360deg);
         transition: 0.4s ease;
     }
 }
 
-.dish-card {    /* Container carte menu */
+/* Container carte menu */
+.dish-card {
 
     &:hover .dish-check {
         transform: translateX(0%);
 
-        .fa-circle-check {  /* Rotation icône */
+        /* Rotation icône */
+        .fa-circle-check {
             transform: rotate(0deg);
         }
     }
 
-    &:hover h4 {    /*  */
+    &:hover h4 {
         width: 72%;
         padding-right: 10px;
     }

@@ -1,12 +1,16 @@
-section {   /* Règle commune */
+/* Règle commune */
+section {
     display: flex;
+    transition: $transition-media;
 }
 
-.location, .explore {   /* règle container location + explore */
+/* règle container location + explore */
+.location, .explore {
     justify-content: center;
 }
 
-.location {     /* Container location accueil */
+/* Container location accueil */
+.location {
     height: 50px;
     align-items: center;
     background-color: $color-dark-gray;
@@ -18,9 +22,14 @@ section {   /* Règle commune */
     i {
         margin-right: 17px;
     }
+
+    #location {
+        display: none;
+    }
 }
 
-.explore {      /* Container explore accueil */
+/* Container explore accueil */
+.explore {
     flex-direction: column;
     height: auto;
     align-items: center;
@@ -28,7 +37,8 @@ section {   /* Règle commune */
     background-color: $color-light-gray;
     padding: 10% 5% 15% 5%;
 
-    .about {    /* Contenu about du container explore */
+    /* Contenu about du container explore */
+    .about {
         height: 100%;
         
         h2 {
@@ -41,7 +51,8 @@ section {   /* Règle commune */
     }
 }
 
-.step {     /* Container Fonctionnement */
+/* Container Fonctionnement */
+.step {
     flex-direction: column;
     padding: 36px 19px 42px 19px;
 
@@ -50,7 +61,8 @@ section {   /* Règle commune */
     }
 }
 
-.rest {     /* Container Restaurants */
+/* Container Restaurants */
+.rest {
     flex-direction: column;
     padding: 54px 19px 62px 19px;
     background-color: $color-light-gray;
@@ -69,31 +81,36 @@ section {   /* Règle commune */
             position: relative;
             height: 251px;
             border-radius: 14px;
+            padding-bottom: 77px;
             overflow: hidden;
-            box-shadow: var(--card-shadow-dft);
+            box-shadow: $card-shadow-dft;
             transition: 0.3s ease;
 
             &:hover {
-                box-shadow: var(--card-shadow-hover);
+                box-shadow: $card-shadow-hover;
             }
         }
     }
 }
 
-.main--menu {    /* Container principal page menu */
+/* Container principal page menu */
+.main--menu {
     width: 100%;
 
-    .menu-top-img {    /* Container image sous le header page menu */
+    /* Container image sous le header page menu */
+    .menu-top-img {
         height: 267px;
 
         img {
             width: 100%;
             object-fit: cover;
+            transition: $transition-media;
         }
     }
 }
 
-.menu {     /* Container menu */
+/* Container menu */
+.menu {
     flex-direction: column;
     position: relative;
     margin-top: -51px;
@@ -119,7 +136,8 @@ section {   /* Règle commune */
     }
 }
 
-.dish {     /* Container type de plats */
+/* Container type de plats */
+.dish {
     flex-direction: column;
     width: 100%;
     height: auto;
@@ -132,6 +150,7 @@ section {   /* Règle commune */
         padding: 0 6px;
         
         &::before {
+            /* Ligne sous titre */
             content: "";
             position: absolute;
             width: 40px;

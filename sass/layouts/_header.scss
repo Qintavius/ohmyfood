@@ -6,7 +6,8 @@ header {
     justify-content: center;
     align-items: center;
     
-    a {     /* Zone de clique étendu pour icone flèche retour */
+    /* Zone de clique étendu pour icone flèche retour */
+    a {
         display: flex;
         position: absolute;
         justify-content: center;
@@ -18,12 +19,14 @@ header {
         color: black;
     }
 
-    i {     /* icone flèche retour */
+    /* icone flèche retour */
+    i {
         font-size: 21px;
         padding: 26px 0 21px 0;
     }
 
-    img {   /* logo ohmyfood */
+    /* logo ohmyfood */
+    img {
         height: 100%;
         width: 162px;
         padding: 8px 0 0 0;

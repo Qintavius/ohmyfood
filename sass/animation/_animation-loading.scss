@@ -1,6 +1,7 @@
 /* Animation loading page */
 
-@keyframes loading-letter {    /* Animation lettres */
+/* Animation lettres */
+@keyframes loading-letter {
     0% {
         transform: translateY(50px);
     }
@@ -16,7 +17,8 @@
     }
 }
 
-.loading {  /* Animation lettres */
+/* Animation lettres */
+.loading {
     span {
         &:nth-child(1) {
             animation-delay: 0.1s;
@@ -34,7 +36,8 @@
     }
 }
 
-@keyframes loading-circle {     /* Animation cercle */
+/* Animation cercle */
+@keyframes loading-circle {
     0% {
         height: 60px;
         width: 60px;
