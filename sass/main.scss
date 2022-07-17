@@ -1,16 +1,22 @@
+/* Règles communes */
 @import "./base/base";
 @import "./base/typography";
 
+/* Mise en page */
 @import "./layouts/loading";
 @import "./layouts/header";
 @import "./layouts/container";
 @import "./layouts/footer";
 
+/* Composants */
 @import "./components/buttons.scss";
 @import "./components/cards.scss";
 @import "./components/favorite.scss";
 
+/* Animations */
 @import "./animation/check";
 @import "./animation/animation-loading";
+@import "./animation/element-loading";
 
-@import "./utils/mixins"
+/* Responsive */
+@import "./utils/mixins";
