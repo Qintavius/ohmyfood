@@ -19,6 +19,7 @@ header, main, footer {
   z-index: 10;
 }
 
+/* Fonts */
 /* Charte couleur */
 /* Couleurs fond de sections */
 /* Box shadow boutons, onglets et cartes */
@@ -26,13 +27,12 @@ header, main, footer {
 /* Couleur fond carte */
 /* Transition pages responsive */
 /* media querys */
-/* Importation des fonts */
-/* Variables fonts */
-/* Page d'accueil */
-/* Container main page Accueil */
-.main--home {
+html, body {
   font-family: "Roboto", sans-serif;
 }
+
+/* Page d'accueil */
+/* Container main page Accueil */
 .main--home p {
   font-size: 18px;
   font-weight: 400;
@@ -43,9 +43,9 @@ header, main, footer {
 h2 {
   font-size: 24px;
   font-weight: 700;
-  /* Règle pour pages menu */
 }
 h2.rest-title {
+  /* Règle pour pages menu */
   font-family: "Shrikhand", cursive;
   font-size: 28px;
   font-weight: normal;
@@ -98,9 +98,6 @@ figcaption p {
 }
 
 /* Page menu */
-.dish {
-  font-family: "Roboto", sans-serif;
-}
 .dish .dish-title {
   font-size: 16px;
   font-weight: 400;
@@ -133,7 +130,6 @@ footer p {
 }
 footer li {
   line-height: 27px;
-  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: normal;
 }
@@ -236,6 +232,7 @@ section {
 
 /* Container location accueil */
 .location {
+  display: flex;
   height: 50px;
   align-items: center;
   background-color: #EAEAEA;
@@ -247,7 +244,7 @@ section {
 .location i {
   margin-right: 17px;
 }
-.location #location {
+.location input {
   display: none;
 }
 
@@ -314,6 +311,7 @@ section {
   /* Container image sous le header page menu */
 }
 .main--menu .menu-top-img {
+  display: flex;
   height: 267px;
 }
 .main--menu .menu-top-img img {
@@ -471,11 +469,12 @@ button.button--order {
   height: 100%;
 }
 .rest-card figure img {
-  object-fit: cover;
   width: 100%;
   height: 100%;
   /* Enlève  l'espace entre figure et figcaption */
   vertical-align: bottom;
+  object-fit: cover;
+  object-position: center;
 }
 .rest-card figure .figcaption {
   background-color: white;
@@ -827,19 +826,47 @@ de validation du produit sur carte menu*/
 }
 
 @media screen and (min-width: 650px) and (max-width: 1023px) {
-  section {
-    transition: all 0.5s ease-in-out;
-  }
-  section.location--mobile {
+  .location--mobile {
     /* Localisation */
     display: none;
   }
-  section.location--wide {
+  .location--wide {
     display: flex;
     margin-bottom: 27px;
     background-color: white;
     border-radius: 6px;
     box-shadow: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .location--mobile {
+    /* Localisation */
+    display: none;
+  }
+  .location--wide {
+    display: flex;
+    position: relative;
+    margin-bottom: 34px;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: none;
+  }
+  .location--wide i {
+    position: absolute;
+    left: 0.75%;
+    padding: 10px 14px;
+    font-size: 20px;
+    border-radius: 4px;
+    background-color: #F6F6F6;
+  }
+  .location--wide form {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 650px) and (max-width: 1023px) {
+  section {
+    transition: all 0.5s ease-in-out;
   }
   section.explore {
     /* Container explore accueil */
@@ -960,29 +987,6 @@ de validation du produit sur carte menu*/
 @media screen and (min-width: 1024px) {
   section {
     transition: all 0.5s ease-in-out;
-  }
-  section.location--mobile {
-    /* Localisation */
-    display: none;
-  }
-  section.location--wide {
-    display: flex;
-    position: relative;
-    margin-bottom: 34px;
-    background-color: white;
-    border-radius: 6px;
-    box-shadow: none;
-  }
-  section.location--wide i {
-    position: absolute;
-    left: 0.75%;
-    padding: 10px 14px;
-    font-size: 20px;
-    border-radius: 4px;
-    background-color: #F6F6F6;
-  }
-  section.location--wide form {
-    font-size: 20px;
   }
   section.explore {
     /* Container explore accueil */
@@ -1161,5 +1165,9 @@ de validation du produit sur carte menu*/
     display: none;
   }
 }
+
+/* Fonts */
+/* Shrikhand */
+/* Roboto */
 
 /*# sourceMappingURL=main.css.map */
