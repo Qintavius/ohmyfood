@@ -1,17 +1,11 @@
-/* Importation des fonts */
-
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
-
-/* Variables fonts */
-$font-logo: 'Shrikhand', cursive;
-$font-txt: 'Roboto', sans-serif;
+html, body {
+    font-family: $font-txt;
+}
 
 /* Page d'accueil */
 
 /* Container main page Accueil */
 .main--home {
-    font-family: $font-txt;
         p {
             font-size: 18px;
             font-weight: 400;
@@ -24,8 +18,8 @@ h2 {
     font-size: 24px;
     font-weight: 700;
 
-    /* Règle pour pages menu */
     &.rest-title {
+/* Règle pour pages menu */
         font-family: $font-logo;
         font-size: 28px;
         font-weight: normal;
@@ -89,8 +83,6 @@ figcaption {
 /* Page menu */
 
 .dish {
-    font-family: $font-txt;
-
     .dish-title {
         font-size: 16px;
         font-weight: 400;
@@ -130,7 +122,6 @@ footer {
 
     li {
         line-height: 27px;
-        font-family: $font-txt;
         font-size: 16px;
         font-weight: normal;
         
