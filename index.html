@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,27 +27,28 @@
 
     <main class="main main--home">   <!--  Container principal parent de section 1, 2, 3 et 4 -->
 
-        <section class="location location--mobile">  <!-- Section 1 localisation -->
+        <div class="location location--mobile">  <!-- Section 1 localisation -->
             <i class="fa-solid fa-location-dot"></i>
-            <form action="search">Paris, Belleville</form>
-        </section>
+            <form action="#">
+                <label>Paris, Belleville</label>
+                <input type="search" disabled>
+            </form>
+        </div>
 
         <section class="explore"> <!-- Section 2 à propos et explorer nos restaurants -->
             <div class="about">
                 <h2>Réservez le menu qui vous convient</h2>
                 <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
 
-                <section class="location location--wide">  <!-- Section 1 localisation -->
+                <div class="location location--wide">  <!-- Section 1 localisation -->
                     <i class="fa-solid fa-location-dot"></i>
                     <form action="#">
-                        <label for="location">Paris, Belleville</label>
-                        <input type="search" id="location" name="location" disabled>
-                        </form>
-                </section>
+                        <label>Paris, Belleville</label>
+                        <input type="search" disabled>
+                    </form>
+                </div>
 
-                <a href="#rest">
                     <button class="button">Explorer nos restaurants</button>
-                </a>
             </div>
         </section>
 
@@ -80,9 +81,9 @@
                             <figcaption class="figcaption figcaption--new">
                                 <p>La palette du goût</p>  <!-- Nom restaurant -->
                                 <p>Ménilmontant</p> <!-- Recette -->
-                                <div class="icon_fav">  <!-- Icone favoris -->
+                                <span class="icon_fav">  <!-- Icone favoris -->
                                     <i class="fa-solid fa-heart"></i>
-                                </div>
+                                </span>
                             </figcaption>
                         </figure>
                     </a>
@@ -95,9 +96,9 @@
                             <figcaption class="figcaption figcaption--new">
                                 <p>La note enchantée</p>  <!-- Titre restaurant -->
                                 <p>Charonne</p> <!-- Recette -->
-                                <div class="icon_fav"> <!-- Icone favoris -->
+                                <span class="icon_fav"> <!-- Icone favoris -->
                                     <i class="fa-solid fa-heart"></i>
-                                </div>
+                                </span>
                             </figcaption>
                         </figure>
                     </a>
@@ -110,9 +111,9 @@
                             <figcaption  class="figcaption">
                                 <p>à la française</p>  <!-- Titre restaurant -->
                                 <p>Cité Rouge</p> <!-- Recette -->
-                                <div class="icon_fav"> <!-- Icone favoris -->
+                                <span class="icon_fav"> <!-- Icone favoris -->
                                     <i class="fa-solid fa-heart"></i>
-                                </div>
+                                </span>
                             </figcaption>
                         </figure>
                     </a>
@@ -125,9 +126,9 @@
                             <figcaption class="figcaption">
                                 <p>Le délice des sens</p>  <!-- Titre restaurant -->
                                 <p>Folie-Méricourt</p> <!-- Recette -->
-                                <div class="icon_fav"> <!-- Icone favoris -->
+                                <span class="icon_fav"> <!-- Icone favoris -->
                                     <i class="fa-solid fa-heart"></i>
-                                </div>
+                                </span>
                             </figcaption>
                         </figure>
                     </a>
