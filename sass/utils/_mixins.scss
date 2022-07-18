@@ -70,22 +70,55 @@
     }
 }
 
-section {
-    @include tablet{
-        transition: $transition-media;
+.location {
+    @include tablet {
+        &--mobile {
+            /* Localisation */
+                display: none;
+            }
 
-        &.location--mobile {
-        /* Localisation */
-            display: none;
-        }
-
-        &.location--wide {
+        &--wide {
             display: flex;
             margin-bottom: 27px;
             background-color: white;
             border-radius: 6px;
             box-shadow: none;
         }
+    }
+
+    @include desktop {
+        &--mobile {
+            /* Localisation */
+                display: none;
+            }
+
+        &--wide {
+            display: flex;
+            position: relative;
+            margin-bottom: 34px;
+            background-color: white;
+            border-radius: 6px;
+            box-shadow: none;
+
+            i {
+                position: absolute;
+                left: 0.75%;
+                padding: 10px 14px;
+                font-size: 20px;
+                border-radius: 4px;
+                background-color: $color-light-gray;
+            }
+
+            form {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+section {
+    @include tablet{
+        transition: $transition-media;
 
         &.explore {
             /* Container explore accueil */
@@ -235,33 +268,6 @@ section {
 section {
     @include desktop {
         transition: $transition-media;
-
-        &.location--mobile {
-        /* Localisation */
-            display: none;
-        }
-
-        &.location--wide {
-            display: flex;
-            position: relative;
-            margin-bottom: 34px;
-            background-color: white;
-            border-radius: 6px;
-            box-shadow: none;
-
-            i {
-                position: absolute;
-                left: 0.75%;
-                padding: 10px 14px;
-                font-size: 20px;
-                border-radius: 4px;
-                background-color: $color-light-gray;
-            }
-
-            form {
-                font-size: 20px;
-            }
-        }
 
         &.explore {
             /* Container explore accueil */
