@@ -11,6 +11,7 @@ section {
 
 /* Container location accueil */
 .location {
+    display: flex;
     height: 50px;
     align-items: center;
     background-color: $color-dark-gray;
@@ -23,7 +24,7 @@ section {
         margin-right: 17px;
     }
 
-    #location {
+    input {
         display: none;
     }
 }
@@ -99,6 +100,7 @@ section {
 
     /* Container image sous le header page menu */
     .menu-top-img {
+        display: flex;
         height: 267px;
 
         img {
