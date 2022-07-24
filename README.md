@@ -97,5 +97,7 @@ des points de suspension. Un exemple de l’effet attendu est fourni.
 ### Organisation interne du projet:
 
 Chef de projet : Paul
+
 UX Designer : Fanny
+
 Circuit de validation : toutes les étapes du projet seront validées par Paul
