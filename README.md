@@ -1,5 +1,7 @@
 # ohmyfood
 
+<img width="1060" alt="ohmyfood-responsive-dark" src="https://user-images.githubusercontent.com/106745831/180749169-50581f93-f3a9-47af-acc2-cbd9f2b23cbd.png">
+
 ## Concept:
 
 Ohmyfood! est une entreprise de commande de repas en ligne. Notre concept permet aux utilisateurs de composer leur propre menu et réduire leur temps d’attente dans les restaurants car leur menu est préparé à l’avance. Plus de perte de temps à consulter la carte
